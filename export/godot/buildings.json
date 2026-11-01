@@ -1,0 +1,1995 @@
+{
+  "buildings": [
+    {
+      "needsTube": false,
+      "needsDozed": false,
+      "buildable": false,
+      "id": "seedLander",
+      "name": "Seed Lander",
+      "layer": "surface",
+      "category": "seed",
+      "rawKeys": [
+        "Seed"
+      ],
+      "desc": "Hub of the seed complex. Its four tubes connect the seed units.",
+      "breakdown": 0,
+      "automated": true,
+      "color": "#b9c4cf",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {},
+          "buildTurns": 1,
+          "upkeep": [],
+          "power": 0,
+          "workers": 0,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": false,
+      "id": "seedPower",
+      "name": "Seed Power Unit",
+      "layer": "surface",
+      "category": "seed",
+      "rawKeys": [
+        "SeedPower"
+      ],
+      "desc": "Automated power, 50 units per turn. Fails around turn 150.",
+      "breakdown": 0,
+      "automated": true,
+      "powerOutput": 50,
+      "color": "#e6c35c",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {},
+          "buildTurns": 4,
+          "upkeep": [],
+          "power": 0,
+          "workers": 0,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": false,
+      "id": "seedSmelter",
+      "name": "Seed Smelter",
+      "layer": "surface",
+      "category": "seed",
+      "rawKeys": [
+        "SeedSmelter"
+      ],
+      "desc": "Automated ore processor with built-in storage. Fails around turn 150.",
+      "breakdown": 0,
+      "automated": true,
+      "color": "#d48a4a",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {},
+          "buildTurns": 6,
+          "upkeep": [],
+          "power": 0,
+          "workers": 0,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": false,
+      "id": "seedFactory",
+      "name": "Seed Robot Factory",
+      "layer": "surface",
+      "category": "seed",
+      "rawKeys": [
+        "SeedFact"
+      ],
+      "desc": "Automated factory for robots and trucks. Fails around turn 150.",
+      "breakdown": 0,
+      "automated": true,
+      "color": "#8fb3d9",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {},
+          "buildTurns": 8,
+          "upkeep": [],
+          "power": 0,
+          "workers": 0,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": false,
+      "id": "seedCommand",
+      "name": "Seed Command Facility",
+      "layer": "surface",
+      "category": "seed",
+      "rawKeys": [
+        "SeedCommand"
+      ],
+      "desc": "Controls robots and houses colonists until Residences exist.",
+      "breakdown": 0,
+      "automated": true,
+      "color": "#c9d6e3",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {},
+          "buildTurns": 10,
+          "upkeep": [],
+          "power": 0,
+          "workers": 0,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": false,
+      "needsDozed": false,
+      "buildable": true,
+      "id": "command",
+      "name": "Command Center",
+      "layer": "surface",
+      "category": "core",
+      "rawKeys": [
+        "Command"
+      ],
+      "desc": "Colony administration and robot control. Needed to start a colony.",
+      "breakdown": 50,
+      "color": "#c9d6e3",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 3,
+            "MetalC": 3,
+            "PrecA": 3,
+            "MinA": 3,
+            "MinB": 3
+          },
+          "buildTurns": 3,
+          "upkeep": [],
+          "power": 0,
+          "workers": 1,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": false,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "tube",
+      "name": "Tube",
+      "layer": "surface",
+      "category": "core",
+      "rawKeys": [
+        "XPipe"
+      ],
+      "desc": "Carries air and power between structures.",
+      "breakdown": 0,
+      "passive": true,
+      "color": "#6f7c88",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 3
+          },
+          "buildTurns": 1,
+          "upkeep": [],
+          "power": 0,
+          "workers": 0,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": false,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "ugTube",
+      "name": "Tube",
+      "layer": "underground",
+      "category": "core",
+      "rawKeys": [
+        "UGXPipe"
+      ],
+      "desc": "Carries air and power between underground structures.",
+      "breakdown": 0,
+      "passive": true,
+      "color": "#6f7c88",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 3
+          },
+          "buildTurns": 1,
+          "upkeep": [],
+          "power": 0,
+          "workers": 0,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": false,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "road",
+      "name": "Road",
+      "layer": "surface",
+      "category": "transport",
+      "rawKeys": [
+        "XRoad"
+      ],
+      "desc": "Paved route. Trucks move 5 tiles per turn. Uses road material.",
+      "breakdown": 0,
+      "passive": true,
+      "color": "#55504a",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 3
+          },
+          "buildTurns": 2,
+          "upkeep": [],
+          "power": 0,
+          "workers": 0,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "agridome",
+      "name": "Agricultural Dome",
+      "layer": "surface",
+      "category": "life",
+      "rawKeys": [
+        "AgriDome",
+        "AgriDome2",
+        "AgriDome3"
+      ],
+      "tiered": true,
+      "desc": "Grows food for 100 colonists per turn and stores 1000 units.",
+      "breakdown": 20,
+      "color": "#6fbf73",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 9,
+            "MinA": 9,
+            "MinB": 9,
+            "MinC": 9
+          },
+          "buildTurns": 5,
+          "upkeep": [
+            "MinA",
+            "MinB",
+            "MinC"
+          ],
+          "power": 2,
+          "workers": 1,
+          "morale": 1
+        },
+        {
+          "tier": 2,
+          "buildCost": {
+            "MetalA": 9,
+            "MinA": 9,
+            "MinB": 9,
+            "MinC": 9
+          },
+          "buildTurns": 5,
+          "upkeep": [
+            "MinA",
+            "MinB",
+            "MinC"
+          ],
+          "power": 2,
+          "workers": 1,
+          "morale": 1
+        },
+        {
+          "tier": 3,
+          "buildCost": {
+            "MetalA": 9,
+            "MinA": 9,
+            "MinB": 9,
+            "MinC": 9
+          },
+          "buildTurns": 5,
+          "upkeep": [
+            "MinA",
+            "MinB",
+            "MinC"
+          ],
+          "power": 2,
+          "workers": 1,
+          "morale": 1
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "chap",
+      "name": "CHAP Facility",
+      "layer": "surface",
+      "category": "life",
+      "rawKeys": [
+        "Chap"
+      ],
+      "desc": "Closed Habitat Atmospheric Production. One supplies the whole connected colony.",
+      "breakdown": 10,
+      "color": "#7fd1d8",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 18,
+            "MetalC": 18,
+            "MetalD": 18,
+            "PrecA": 18,
+            "MinA": 18,
+            "MinC": 18
+          },
+          "buildTurns": 6,
+          "upkeep": [
+            "PrecA",
+            "MinA",
+            "MinC"
+          ],
+          "power": 5,
+          "workers": 4,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "smelter",
+      "name": "Smelter",
+      "layer": "surface",
+      "category": "industry",
+      "rawKeys": [
+        "Smelter",
+        "Smelter2"
+      ],
+      "tiered": true,
+      "desc": "Turns mined ore into processed resources. Holds 1000 units of ore.",
+      "breakdown": 10,
+      "color": "#d48a4a",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 18,
+            "MetalB": 18,
+            "MetalC": 18,
+            "MetalD": 18,
+            "MinA": 18,
+            "MinB": 18,
+            "MinC": 18
+          },
+          "buildTurns": 7,
+          "upkeep": [
+            "MetalA",
+            "MetalB",
+            "MetalC",
+            "MetalD",
+            "MinA",
+            "MinB",
+            "MinC"
+          ],
+          "power": 5,
+          "workers": 3,
+          "morale": 0
+        },
+        {
+          "tier": 2,
+          "buildCost": {
+            "MetalA": 18,
+            "MetalB": 18,
+            "MetalC": 18,
+            "MetalD": 18,
+            "MinA": 18,
+            "MinB": 18,
+            "MinC": 18
+          },
+          "buildTurns": 7,
+          "upkeep": [
+            "MetalA",
+            "MetalB",
+            "MetalC",
+            "MetalD",
+            "MinA",
+            "MinB",
+            "MinC"
+          ],
+          "power": 5,
+          "workers": 3,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": false,
+      "needsDozed": false,
+      "buildable": false,
+      "id": "mine",
+      "name": "Mine",
+      "layer": "surface",
+      "category": "industry",
+      "rawKeys": [
+        "ActiveMine"
+      ],
+      "desc": "Built by a robominer on a beacon. Trucks haul its ore to smelters.",
+      "breakdown": 30,
+      "color": "#a26f4f",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 18,
+            "MinA": 18
+          },
+          "buildTurns": 7,
+          "upkeep": [],
+          "power": 5,
+          "workers": 1,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "storage",
+      "name": "Storage Tanks",
+      "layer": "surface",
+      "category": "industry",
+      "rawKeys": [
+        "Storage"
+      ],
+      "desc": "Holds 1000 units of processed resources.",
+      "breakdown": 0,
+      "color": "#9aa7b3",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 6,
+            "MetalB": 6
+          },
+          "buildTurns": 2,
+          "upkeep": [],
+          "power": 1,
+          "workers": 0,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "warehouse",
+      "name": "Warehouse",
+      "layer": "surface",
+      "category": "industry",
+      "rawKeys": [
+        "Warehouse"
+      ],
+      "desc": "Stores 100 mass units of goods: clothing, medicine, fuel cells, robots.",
+      "breakdown": 5,
+      "color": "#b89b72",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 6,
+            "MetalD": 6,
+            "MinA": 6
+          },
+          "buildTurns": 2,
+          "upkeep": [],
+          "power": 1,
+          "workers": 1,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "factory",
+      "name": "Factory",
+      "layer": "surface",
+      "category": "industry",
+      "rawKeys": [
+        "Fact",
+        "Fact2",
+        "Fact3"
+      ],
+      "tiered": true,
+      "desc": "Builds robots, trucks, fuel cells and road material.",
+      "breakdown": 10,
+      "color": "#8fb3d9",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 18,
+            "MetalB": 18,
+            "MetalC": 18,
+            "MetalD": 18,
+            "PrecA": 18,
+            "PrecB": 18,
+            "MinA": 18,
+            "MinB": 18,
+            "MinC": 18,
+            "FusionA": 18
+          },
+          "buildTurns": 6,
+          "upkeep": [
+            "MetalA",
+            "MetalB",
+            "MetalC",
+            "MetalD",
+            "PrecA",
+            "PrecB",
+            "MinA",
+            "MinB",
+            "MinC",
+            "FusionA"
+          ],
+          "power": 5,
+          "workers": 1,
+          "morale": 0
+        },
+        {
+          "tier": 2,
+          "buildCost": {
+            "MetalA": 18,
+            "MetalB": 18,
+            "MetalC": 18,
+            "MetalD": 18,
+            "PrecA": 18,
+            "PrecB": 18,
+            "MinA": 18,
+            "MinB": 18,
+            "MinC": 18,
+            "FusionA": 18
+          },
+          "buildTurns": 6,
+          "upkeep": [
+            "MetalA",
+            "MetalB",
+            "MetalC",
+            "MetalD",
+            "PrecA",
+            "PrecB",
+            "MinA",
+            "MinB",
+            "MinC",
+            "FusionA"
+          ],
+          "power": 5,
+          "workers": 1,
+          "morale": 0
+        },
+        {
+          "tier": 3,
+          "buildCost": {
+            "MetalA": 18,
+            "MetalB": 18,
+            "MetalC": 18,
+            "MetalD": 18,
+            "PrecA": 18,
+            "PrecB": 18,
+            "MinA": 18,
+            "MinB": 18,
+            "MinC": 18,
+            "FusionA": 18
+          },
+          "buildTurns": 6,
+          "upkeep": [
+            "MetalA",
+            "MetalB",
+            "MetalC",
+            "MetalD",
+            "PrecA",
+            "PrecB",
+            "MinA",
+            "MinB",
+            "MinC",
+            "FusionA"
+          ],
+          "power": 5,
+          "workers": 1,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "roboCommand",
+      "name": "Robot Command",
+      "layer": "surface",
+      "category": "core",
+      "rawKeys": [
+        "RoboCmd",
+        "RoboCmd2"
+      ],
+      "tiered": true,
+      "desc": "Controls up to 10 more robots and orders repairs.",
+      "breakdown": 30,
+      "color": "#b4a3d6",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 12,
+            "MetalC": 12,
+            "PrecA": 12,
+            "MinA": 12,
+            "MinB": 12
+          },
+          "buildTurns": 3,
+          "upkeep": [],
+          "power": 3,
+          "workers": 1,
+          "morale": 0
+        },
+        {
+          "tier": 2,
+          "buildCost": {
+            "MetalA": 12,
+            "MetalC": 12,
+            "PrecA": 12,
+            "MinA": 12,
+            "MinB": 12
+          },
+          "buildTurns": 3,
+          "upkeep": [],
+          "power": 3,
+          "workers": 1,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "commTower",
+      "name": "Communications Tower",
+      "layer": "surface",
+      "category": "core",
+      "rawKeys": [
+        "CommTwr"
+      ],
+      "desc": "Extends robot communication range.",
+      "breakdown": 5,
+      "color": "#d6d6a3",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 15,
+            "MetalC": 15,
+            "PrecB": 15,
+            "MinA": 15
+          },
+          "buildTurns": 2,
+          "upkeep": [],
+          "power": 4,
+          "workers": 1,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "tokamak",
+      "name": "Tokamak Fusion Reactor",
+      "layer": "surface",
+      "category": "power",
+      "rawKeys": [
+        "Tokamak"
+      ],
+      "requires": "unlock:tokamak",
+      "desc": "1000 power. Burns fusion fuels. Its containment hurts morale.",
+      "breakdown": 30,
+      "powerOutput": 1000,
+      "color": "#f0d060",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 3,
+            "MetalB": 3,
+            "MetalC": 3,
+            "MetalD": 3,
+            "PrecA": 3,
+            "PrecB": 3,
+            "MinA": 3,
+            "MinB": 3,
+            "MinC": 3,
+            "FusionA": 3,
+            "FusionB": 3,
+            "FusionC": 3
+          },
+          "buildTurns": 9,
+          "upkeep": [
+            "FusionA",
+            "FusionB",
+            "FusionC"
+          ],
+          "power": 0,
+          "workers": 1,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": false,
+      "id": "shipTokamak",
+      "name": "Tokamak (brought)",
+      "layer": "surface",
+      "category": "power",
+      "rawKeys": [
+        "MShipTokamak"
+      ],
+      "desc": "Starship reactor delivered by cargo lander. 1000 power.",
+      "breakdown": 5,
+      "powerOutput": 1000,
+      "color": "#f0d060",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {},
+          "buildTurns": 2,
+          "upkeep": [
+            "FusionA",
+            "FusionB",
+            "FusionC"
+          ],
+          "power": 0,
+          "workers": 1,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "solarReceiver",
+      "name": "Solar Receiver Array",
+      "layer": "surface",
+      "category": "power",
+      "rawKeys": [
+        "SolrPwrRecvr"
+      ],
+      "requires": "unlock:solarReceiver",
+      "desc": "Receives power from an orbiting Solar Power Satellite.",
+      "breakdown": 20,
+      "powerOutput": 1000,
+      "color": "#e0b040",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 6,
+            "MetalB": 6,
+            "MetalD": 6,
+            "PrecA": 6,
+            "PrecB": 6,
+            "MinA": 6
+          },
+          "buildTurns": 4,
+          "upkeep": [],
+          "power": 0,
+          "workers": 1,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "hotLab",
+      "name": "Hot Laboratory",
+      "layer": "surface",
+      "category": "science",
+      "rawKeys": [
+        "HotLab",
+        "HotLab2"
+      ],
+      "desc": "Dangerous research. Needed for some topics.",
+      "breakdown": 20,
+      "scientists": true,
+      "color": "#e07a5f",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 15,
+            "MetalB": 15,
+            "MetalC": 15,
+            "MetalD": 15,
+            "PrecA": 15,
+            "PrecB": 15,
+            "MinA": 15,
+            "MinB": 15,
+            "MinC": 15,
+            "FusionA": 15,
+            "FusionB": 15
+          },
+          "buildTurns": 5,
+          "upkeep": [
+            "MetalA",
+            "MetalB",
+            "PrecA",
+            "PrecB",
+            "MinA",
+            "MinB",
+            "MinC"
+          ],
+          "power": 4,
+          "workers": 2,
+          "morale": -1
+        },
+        {
+          "tier": 2,
+          "buildCost": {
+            "MetalA": 15,
+            "MetalB": 15,
+            "MetalC": 15,
+            "MetalD": 15,
+            "PrecA": 15,
+            "PrecB": 15,
+            "MinA": 15,
+            "MinB": 15,
+            "MinC": 15,
+            "FusionA": 15,
+            "FusionB": 15
+          },
+          "buildTurns": 5,
+          "upkeep": [
+            "MetalA",
+            "MetalB",
+            "PrecA",
+            "PrecB",
+            "MinA",
+            "MinB",
+            "MinC"
+          ],
+          "power": 4,
+          "workers": 2,
+          "morale": -1
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "spew",
+      "name": "SPEW Facility",
+      "layer": "surface",
+      "category": "life",
+      "rawKeys": [
+        "Spew"
+      ],
+      "desc": "Recycles waste into Multi-Purpose Goo, which substitutes for missing upkeep.",
+      "breakdown": 40,
+      "color": "#9bb56a",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 12,
+            "MetalC": 12,
+            "MetalD": 12,
+            "MinA": 12,
+            "MinB": 12,
+            "MinC": 12
+          },
+          "buildTurns": 8,
+          "upkeep": [
+            "MinA",
+            "MinB",
+            "MinC"
+          ],
+          "power": 3,
+          "workers": 2,
+          "morale": 1
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "dirt",
+      "name": "DIRT Facility",
+      "layer": "surface",
+      "category": "life",
+      "rawKeys": [
+        "Dirt"
+      ],
+      "desc": "Disaster Impact Reduction Team. Protects structures within 5 tiles.",
+      "breakdown": 0,
+      "color": "#c86b6b",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 15,
+            "MetalB": 15,
+            "MetalC": 15,
+            "MetalD": 15,
+            "PrecA": 15,
+            "MinA": 15,
+            "MinB": 15
+          },
+          "buildTurns": 5,
+          "upkeep": [
+            "MetalA",
+            "MetalB",
+            "MetalC",
+            "MetalD",
+            "PrecA",
+            "MinA",
+            "MinB"
+          ],
+          "power": 4,
+          "workers": 2,
+          "morale": 1
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "police",
+      "name": "Police",
+      "layer": "surface",
+      "category": "society",
+      "rawKeys": [
+        "Cops"
+      ],
+      "desc": "Reduces crime.",
+      "breakdown": 20,
+      "color": "#5d7bb0",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 12,
+            "MetalB": 12,
+            "MetalD": 12,
+            "MinA": 12
+          },
+          "buildTurns": 4,
+          "upkeep": [
+            "MetalA",
+            "MetalB",
+            "MinA"
+          ],
+          "power": 3,
+          "workers": 2,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "spaceport",
+      "name": "Spaceport",
+      "layer": "surface",
+      "category": "space",
+      "rawKeys": [
+        "SpacePort"
+      ],
+      "requires": "unlock:spaceport",
+      "desc": "Launches satellites and starship components.",
+      "breakdown": 30,
+      "color": "#d0d8e0",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 18,
+            "MetalD": 18,
+            "MinA": 18,
+            "MinB": 18,
+            "MinC": 18
+          },
+          "buildTurns": 7,
+          "upkeep": [
+            "PrecA",
+            "MinA",
+            "FusionA"
+          ],
+          "power": 5,
+          "workers": 4,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "massDriver",
+      "name": "Mass Driver",
+      "layer": "surface",
+      "category": "space",
+      "rawKeys": [
+        "MassDrv"
+      ],
+      "requires": "unlock:massDriver",
+      "desc": "Launches payloads cheaply. Required to assemble a starship.",
+      "breakdown": 20,
+      "color": "#a0a8b8",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 18,
+            "MetalB": 18,
+            "MetalC": 18,
+            "MetalD": 18,
+            "PrecA": 18,
+            "PrecB": 18,
+            "MinA": 18,
+            "MinB": 18,
+            "MinC": 18,
+            "FusionB": 18
+          },
+          "buildTurns": 9,
+          "upkeep": [
+            "MetalA",
+            "MetalB",
+            "MetalC",
+            "MetalD",
+            "PrecA"
+          ],
+          "power": 5,
+          "workers": 4,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "trade",
+      "name": "Trade Mission",
+      "layer": "surface",
+      "category": "society",
+      "rawKeys": [
+        "Trade"
+      ],
+      "desc": "Opens trade with the other colony.",
+      "breakdown": 0,
+      "color": "#d6b45d",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 3,
+            "MetalC": 3,
+            "PrecA": 3,
+            "MinA": 3,
+            "MinB": 3
+          },
+          "buildTurns": 2,
+          "upkeep": [],
+          "power": 1,
+          "workers": 1,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "nano",
+      "name": "Nanotechnology Facility",
+      "layer": "surface",
+      "category": "industry",
+      "rawKeys": [
+        "Nano"
+      ],
+      "requires": "unlock:nano",
+      "desc": "Removes resource upkeep from every structure.",
+      "breakdown": 20,
+      "color": "#c08bd6",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 12,
+            "MetalB": 12,
+            "MetalD": 12,
+            "PrecA": 12,
+            "PrecB": 12,
+            "MinA": 12,
+            "MinB": 12,
+            "MinC": 12
+          },
+          "buildTurns": 5,
+          "upkeep": [],
+          "power": 3,
+          "workers": 2,
+          "morale": 1
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "terraform",
+      "name": "Terraforming Facility",
+      "layer": "surface",
+      "category": "space",
+      "rawKeys": [
+        "TerraForm"
+      ],
+      "requires": "terraform",
+      "desc": "Builds a breathable atmosphere for the whole planet.",
+      "breakdown": 20,
+      "color": "#7fd18b",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 18,
+            "MetalB": 18,
+            "MetalC": 18,
+            "MetalD": 18,
+            "PrecA": 18,
+            "PrecB": 18,
+            "MinA": 18,
+            "MinB": 18,
+            "MinC": 18
+          },
+          "buildTurns": 9,
+          "upkeep": [
+            "MinA",
+            "MinB",
+            "MinC"
+          ],
+          "power": 5,
+          "workers": 4,
+          "morale": 5
+        }
+      ]
+    },
+    {
+      "needsTube": false,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "monorail",
+      "name": "Monorail",
+      "layer": "surface",
+      "category": "transport",
+      "rawKeys": [
+        "XMono"
+      ],
+      "requires": "unlock:monorail",
+      "desc": "Fast ore route. Trucks treat it as 10 tiles per turn.",
+      "breakdown": 30,
+      "color": "#8b8f99",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 15,
+            "MetalB": 15,
+            "MetalC": 15,
+            "MetalD": 15,
+            "MinA": 15,
+            "MinB": 15,
+            "MinC": 15
+          },
+          "buildTurns": 12,
+          "upkeep": [],
+          "power": 4,
+          "workers": 1,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "monoStation",
+      "name": "Monorail Station",
+      "layer": "surface",
+      "category": "transport",
+      "rawKeys": [
+        "MonoStation"
+      ],
+      "requires": "unlock:monorail",
+      "desc": "Required terminal for monorail lines.",
+      "breakdown": 30,
+      "color": "#a6abb6",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 12,
+            "MetalB": 12,
+            "MetalC": 12,
+            "MetalD": 12,
+            "MinA": 12,
+            "MinB": 12,
+            "MinC": 12
+          },
+          "buildTurns": 6,
+          "upkeep": [],
+          "power": 3,
+          "workers": 1,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "monoTransformer",
+      "name": "Monorail Power",
+      "layer": "surface",
+      "category": "transport",
+      "rawKeys": [
+        "MonoXFormer"
+      ],
+      "requires": "unlock:monorail",
+      "desc": "Powers the monorail.",
+      "breakdown": 30,
+      "color": "#a6abb6",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 12,
+            "MetalB": 12,
+            "MetalC": 12,
+            "MetalD": 12,
+            "MinA": 12,
+            "MinB": 12,
+            "MinC": 12
+          },
+          "buildTurns": 6,
+          "upkeep": [],
+          "power": 1,
+          "workers": 1,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": false,
+      "needsDozed": true,
+      "buildable": false,
+      "id": "airShaft",
+      "name": "Air Shaft",
+      "layer": "surface",
+      "category": "core",
+      "rawKeys": [
+        "Core"
+      ],
+      "desc": "Dug by a robodigger. Carries air and power underground.",
+      "breakdown": 0,
+      "passive": true,
+      "color": "#7d8a96",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {},
+          "buildTurns": 1,
+          "upkeep": [],
+          "power": 0,
+          "workers": 0,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": false,
+      "needsDozed": false,
+      "buildable": false,
+      "id": "ugShaft",
+      "name": "Air Shaft",
+      "layer": "underground",
+      "category": "core",
+      "rawKeys": [
+        "UGCore"
+      ],
+      "desc": "Connects this level to the one above.",
+      "breakdown": 0,
+      "passive": true,
+      "color": "#7d8a96",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {},
+          "buildTurns": 1,
+          "upkeep": [],
+          "power": 0,
+          "workers": 0,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "residence",
+      "name": "Residential Unit",
+      "layer": "underground",
+      "category": "society",
+      "rawKeys": [
+        "UGResident",
+        "UGResident2",
+        "UGResident3"
+      ],
+      "tiered": true,
+      "desc": "Houses colonists.",
+      "breakdown": 10,
+      "color": "#d9c27a",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 9,
+            "MetalB": 9,
+            "MinA": 9,
+            "MinC": 9
+          },
+          "buildTurns": 3,
+          "upkeep": [],
+          "power": 2,
+          "workers": 1,
+          "morale": 0
+        },
+        {
+          "tier": 2,
+          "buildCost": {
+            "MetalA": 9,
+            "MetalB": 9,
+            "MinA": 9,
+            "MinC": 9
+          },
+          "buildTurns": 3,
+          "upkeep": [],
+          "power": 2,
+          "workers": 1,
+          "morale": 0
+        },
+        {
+          "tier": 3,
+          "buildCost": {
+            "MetalA": 9,
+            "MetalB": 9,
+            "MinA": 9,
+            "MinC": 9
+          },
+          "buildTurns": 3,
+          "upkeep": [],
+          "power": 2,
+          "workers": 1,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "rec",
+      "name": "Recreation Facility",
+      "layer": "underground",
+      "category": "society",
+      "rawKeys": [
+        "UGRec"
+      ],
+      "desc": "Entertainment. Raises morale.",
+      "breakdown": 20,
+      "color": "#e3a0c8",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 6,
+            "MetalC": 6,
+            "MetalD": 6,
+            "PrecA": 6,
+            "MinA": 6,
+            "MinB": 6,
+            "MinC": 6
+          },
+          "buildTurns": 4,
+          "upkeep": [],
+          "power": 1,
+          "workers": 1,
+          "morale": 1
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "university",
+      "name": "University",
+      "layer": "underground",
+      "category": "science",
+      "rawKeys": [
+        "UGUniv"
+      ],
+      "desc": "Turns students into scientists.",
+      "breakdown": 20,
+      "color": "#a3c4e3",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 9,
+            "MetalB": 9,
+            "MetalC": 9,
+            "PrecB": 9,
+            "MinA": 9,
+            "MinB": 9,
+            "MinC": 9
+          },
+          "buildTurns": 4,
+          "upkeep": [
+            "PrecB"
+          ],
+          "power": 2,
+          "workers": 2,
+          "morale": 1
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "commercial",
+      "name": "Commercial",
+      "layer": "underground",
+      "category": "society",
+      "rawKeys": [
+        "UGCommercial"
+      ],
+      "desc": "Retail outlet for luxuries. Raises morale while stocked.",
+      "breakdown": 10,
+      "color": "#e3c4a3",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 12,
+            "MetalB": 12,
+            "MetalD": 12,
+            "MinA": 12
+          },
+          "buildTurns": 3,
+          "upkeep": [],
+          "power": 3,
+          "workers": 2,
+          "morale": 1
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "park",
+      "name": "Park / Reservoir",
+      "layer": "underground",
+      "category": "society",
+      "rawKeys": [
+        "UGPark"
+      ],
+      "desc": "Needs no staff. Raises morale.",
+      "breakdown": 10,
+      "color": "#6fbf73",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 6,
+            "MinA": 6,
+            "MinB": 6,
+            "MinC": 6
+          },
+          "buildTurns": 3,
+          "upkeep": [],
+          "power": 1,
+          "workers": 0,
+          "morale": 1
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "lightIndustry",
+      "name": "Light Industry",
+      "layer": "underground",
+      "category": "industry",
+      "rawKeys": [
+        "UGFact",
+        "UGFact2"
+      ],
+      "desc": "Makes luxuries, clothing or medicine, one unit per turn.",
+      "breakdown": 20,
+      "color": "#b0a0d0",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 12,
+            "PrecA": 12,
+            "PrecB": 12,
+            "MinA": 12,
+            "MinB": 12,
+            "MinC": 12
+          },
+          "buildTurns": 4,
+          "upkeep": [
+            "MetalA",
+            "MinA",
+            "MinB",
+            "MinC"
+          ],
+          "power": 3,
+          "workers": 2,
+          "morale": 0
+        },
+        {
+          "tier": 2,
+          "buildCost": {
+            "MetalA": 12,
+            "PrecA": 12,
+            "PrecB": 12,
+            "MinA": 12,
+            "MinB": 12,
+            "MinC": 12
+          },
+          "buildTurns": 4,
+          "upkeep": [
+            "MetalA",
+            "MinA",
+            "MinB",
+            "MinC"
+          ],
+          "power": 3,
+          "workers": 2,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "lab",
+      "name": "Laboratory",
+      "layer": "underground",
+      "category": "science",
+      "rawKeys": [
+        "UGLab",
+        "UGLab2",
+        "UGLab3"
+      ],
+      "tiered": true,
+      "desc": "Safe research.",
+      "breakdown": 20,
+      "scientists": true,
+      "color": "#a3d6e3",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 12,
+            "MetalB": 12,
+            "MetalC": 12,
+            "MetalD": 12,
+            "PrecA": 12,
+            "PrecB": 12,
+            "MinA": 12,
+            "MinB": 12,
+            "MinC": 12
+          },
+          "buildTurns": 4,
+          "upkeep": [
+            "PrecA",
+            "PrecB",
+            "MinA",
+            "MinB",
+            "MinC"
+          ],
+          "power": 3,
+          "workers": 2,
+          "morale": 0
+        },
+        {
+          "tier": 2,
+          "buildCost": {
+            "MetalA": 12,
+            "MetalB": 12,
+            "MetalC": 12,
+            "MetalD": 12,
+            "PrecA": 12,
+            "PrecB": 12,
+            "MinA": 12,
+            "MinB": 12,
+            "MinC": 12
+          },
+          "buildTurns": 4,
+          "upkeep": [
+            "PrecA",
+            "PrecB",
+            "MinA",
+            "MinB",
+            "MinC"
+          ],
+          "power": 3,
+          "workers": 2,
+          "morale": 0
+        },
+        {
+          "tier": 3,
+          "buildCost": {
+            "MetalA": 12,
+            "MetalB": 12,
+            "MetalC": 12,
+            "MetalD": 12,
+            "PrecA": 12,
+            "PrecB": 12,
+            "MinA": 12,
+            "MinB": 12,
+            "MinC": 12
+          },
+          "buildTurns": 4,
+          "upkeep": [
+            "PrecA",
+            "PrecB",
+            "MinA",
+            "MinB",
+            "MinC"
+          ],
+          "power": 3,
+          "workers": 2,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "redLight",
+      "name": "Red Light District",
+      "layer": "underground",
+      "category": "society",
+      "rawKeys": [
+        "UGRed"
+      ],
+      "desc": "Entertainment. Raises morale and crime. Draws luxuries.",
+      "breakdown": 0,
+      "color": "#d65d7b",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 9,
+            "MetalD": 9,
+            "PrecA": 9
+          },
+          "buildTurns": 4,
+          "upkeep": [],
+          "power": 2,
+          "workers": 2,
+          "morale": 2
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "admin",
+      "name": "Administration",
+      "layer": "underground",
+      "category": "society",
+      "rawKeys": [
+        "UGAdmin"
+      ],
+      "desc": "Raises productivity of a large colony.",
+      "breakdown": 10,
+      "color": "#c9d6e3",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 6,
+            "MetalC": 6,
+            "PrecA": 6,
+            "MinA": 6,
+            "MinB": 6
+          },
+          "buildTurns": 3,
+          "upkeep": [],
+          "power": 1,
+          "workers": 1,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "medical",
+      "name": "Medical Facility",
+      "layer": "underground",
+      "category": "life",
+      "rawKeys": [
+        "UGMed"
+      ],
+      "desc": "Reduces deaths and doubles the plague window.",
+      "breakdown": 20,
+      "color": "#e3e3e3",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 9,
+            "MetalB": 9,
+            "MetalC": 9,
+            "PrecB": 9,
+            "MinA": 9,
+            "MinB": 9,
+            "MinC": 9
+          },
+          "buildTurns": 4,
+          "upkeep": [
+            "PrecB"
+          ],
+          "power": 2,
+          "workers": 2,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "ugPolice",
+      "name": "Police",
+      "layer": "underground",
+      "category": "society",
+      "rawKeys": [
+        "UGCops"
+      ],
+      "desc": "Reduces crime.",
+      "breakdown": 20,
+      "color": "#5d7bb0",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 12,
+            "MetalB": 12,
+            "MetalD": 12,
+            "MinA": 12
+          },
+          "buildTurns": 3,
+          "upkeep": [
+            "MetalA",
+            "MetalB",
+            "MinA"
+          ],
+          "power": 3,
+          "workers": 2,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": true,
+      "needsDozed": true,
+      "buildable": true,
+      "id": "geothermal",
+      "name": "Geothermal Plant",
+      "layer": "underground",
+      "category": "power",
+      "rawKeys": [
+        "UGGeoTherm"
+      ],
+      "requires": "unlock:geothermal",
+      "desc": "Clean power drawn from the planet's heat.",
+      "breakdown": 20,
+      "powerOutput": 600,
+      "color": "#e07a3a",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {
+            "MetalA": 9,
+            "MetalB": 9,
+            "MetalC": 9,
+            "MetalD": 9,
+            "MinA": 9,
+            "MinB": 9,
+            "MinC": 9
+          },
+          "buildTurns": 9,
+          "upkeep": [],
+          "power": 0,
+          "workers": 1,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": false,
+      "needsDozed": false,
+      "buildable": false,
+      "id": "colonistLander",
+      "name": "Colonist Lander",
+      "layer": "surface",
+      "category": "lander",
+      "rawKeys": [
+        "ColonistLander"
+      ],
+      "desc": "Brings 50 colonists down from orbit.",
+      "breakdown": 0,
+      "passive": true,
+      "color": "#e8e8f0",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {},
+          "buildTurns": 1,
+          "upkeep": [],
+          "power": 0,
+          "workers": 0,
+          "morale": 0
+        }
+      ]
+    },
+    {
+      "needsTube": false,
+      "needsDozed": false,
+      "buildable": false,
+      "id": "cargoLander",
+      "name": "Cargo Lander",
+      "layer": "surface",
+      "category": "lander",
+      "rawKeys": [
+        "CargoLander"
+      ],
+      "desc": "Brings 20 weight of cargo down from orbit.",
+      "breakdown": 0,
+      "passive": true,
+      "color": "#e8e8f0",
+      "tiers": [
+        {
+          "tier": 1,
+          "buildCost": {},
+          "buildTurns": 1,
+          "upkeep": [],
+          "power": 0,
+          "workers": 0,
+          "morale": 0
+        }
+      ]
+    }
+  ],
+  "priority": [
+    "seedLander",
+    "seedPower",
+    "seedCommand",
+    "seedSmelter",
+    "seedFactory",
+    "nano",
+    "solarReceiver",
+    "chap",
+    "smelter",
+    "warehouse",
+    "agridome",
+    "command",
+    "shipTokamak",
+    "tokamak",
+    "geothermal",
+    "spew",
+    "storage",
+    "mine",
+    "residence",
+    "roboCommand",
+    "commTower",
+    "hotLab",
+    "redLight",
+    "park",
+    "rec",
+    "university",
+    "medical",
+    "monoTransformer",
+    "monorail",
+    "massDriver",
+    "trade",
+    "lab",
+    "factory",
+    "police",
+    "ugPolice",
+    "lightIndustry",
+    "commercial",
+    "admin",
+    "dirt",
+    "monoStation",
+    "spaceport",
+    "terraform",
+    "tube",
+    "ugTube",
+    "road",
+    "airShaft",
+    "ugShaft",
+    "colonistLander",
+    "cargoLander"
+  ]
+}

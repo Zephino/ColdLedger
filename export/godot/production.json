@@ -1,0 +1,173 @@
+{
+  "factoryProducts": {
+    "dozer": {
+      "name": "Robodozer",
+      "turns": 5,
+      "cost": {
+        "MetalA": 8,
+        "MetalB": 10,
+        "PrecA": 2
+      },
+      "robot": true
+    },
+    "digger": {
+      "name": "Robodigger",
+      "turns": 5,
+      "cost": {
+        "MetalA": 8,
+        "MetalB": 10,
+        "PrecA": 2
+      },
+      "robot": true
+    },
+    "miner": {
+      "name": "Robominer",
+      "turns": 5,
+      "cost": {
+        "MetalA": 8,
+        "MetalB": 10,
+        "PrecA": 2
+      },
+      "robot": true
+    },
+    "explorer": {
+      "name": "Roboexplorer",
+      "turns": 5,
+      "cost": {
+        "MetalA": 10,
+        "MetalC": 5,
+        "PrecA": 2
+      },
+      "robot": true
+    },
+    "truck": {
+      "name": "Truck",
+      "turns": 5,
+      "cost": {
+        "MetalA": 10,
+        "MetalB": 10,
+        "MetalD": 5
+      },
+      "robot": true
+    },
+    "fuelCells": {
+      "name": "Fuel Cell",
+      "turns": 10,
+      "cost": {
+        "FusionA": 5,
+        "MinA": 2
+      }
+    },
+    "roadMaterial": {
+      "name": "Road Material (5)",
+      "turns": 3,
+      "cost": {
+        "MinA": 10,
+        "MinB": 5
+      }
+    },
+    "repairbot": {
+      "name": "Repairbot",
+      "turns": 5,
+      "cost": {
+        "MetalA": 15,
+        "PrecA": 5,
+        "PrecB": 3
+      },
+      "robot": true
+    },
+    "airbot": {
+      "name": "Airbot",
+      "turns": 5,
+      "cost": {
+        "MetalA": 15,
+        "MetalC": 10,
+        "PrecA": 5
+      },
+      "robot": true
+    },
+    "humanoid": {
+      "name": "Humanoid Worker",
+      "turns": 8,
+      "cost": {
+        "MetalA": 20,
+        "PrecA": 10,
+        "PrecB": 10
+      },
+      "robot": true
+    }
+  },
+  "satellites": {
+    "comsat": {
+      "name": "Comsat",
+      "effect": "sat:comsat",
+      "cost": {
+        "MetalA": 60,
+        "PrecA": 30,
+        "PrecB": 20,
+        "FusionA": 30
+      }
+    },
+    "weatherSat": {
+      "name": "Weathersat",
+      "effect": "sat:weathersat",
+      "cost": {
+        "MetalA": 50,
+        "PrecA": 20,
+        "MinB": 20,
+        "FusionA": 30
+      }
+    },
+    "meteorsat": {
+      "name": "Meteorsat",
+      "effect": "sat:meteorsat",
+      "cost": {
+        "MetalA": 50,
+        "PrecA": 20,
+        "MinB": 20,
+        "FusionA": 30
+      }
+    },
+    "solarSat": {
+      "name": "Solar Power Satellite",
+      "effect": "sat:solarSat",
+      "cost": {
+        "MetalA": 120,
+        "MetalB": 80,
+        "PrecA": 60,
+        "PrecB": 40,
+        "FusionA": 60
+      }
+    },
+    "geoProbe": {
+      "name": "Geological Probe",
+      "effect": "sat:geoProbe",
+      "cost": {
+        "MetalA": 40,
+        "PrecB": 20,
+        "FusionA": 30
+      }
+    },
+    "observer": {
+      "name": "Orbital Observer",
+      "effect": "sat:observer",
+      "cost": {
+        "MetalA": 60,
+        "PrecA": 30,
+        "FusionA": 30
+      }
+    }
+  },
+  "starshipComponentCost": {
+    "MetalA": 300,
+    "MetalB": 200,
+    "MetalC": 150,
+    "MetalD": 150,
+    "PrecA": 80,
+    "PrecB": 80,
+    "MinB": 100,
+    "FusionA": 150,
+    "FusionB": 100,
+    "FusionC": 100
+  }
+}

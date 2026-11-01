@@ -1,0 +1,2402 @@
+[
+  {
+    "seed": 1,
+    "difficulty": "medium",
+    "planet": "vigil",
+    "ending": null,
+    "turns": [
+      {
+        "turn": 10,
+        "population": 0,
+        "morale": 576,
+        "food": 0,
+        "power": [
+          50,
+          0
+        ],
+        "workers": [
+          5,
+          0
+        ],
+        "housing": 120,
+        "stock": {
+          "MetalA": 132,
+          "MetalB": 90,
+          "MetalC": 82,
+          "MetalD": 82,
+          "PrecA": 50,
+          "PrecB": 50,
+          "MinA": 123,
+          "MinB": 91,
+          "MinC": 73,
+          "FusionA": 40,
+          "FusionB": 30,
+          "FusionC": 30
+        },
+        "built": {
+          "residence": 0,
+          "agridome": 0,
+          "mine": 1,
+          "smelter": 0
+        },
+        "research": 0
+      },
+      {
+        "turn": 20,
+        "population": 105,
+        "morale": 540,
+        "food": 577,
+        "power": [
+          1050,
+          27
+        ],
+        "workers": [
+          13,
+          82
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 163,
+          "MetalB": 92,
+          "MetalC": 117,
+          "MetalD": 108,
+          "PrecA": 42,
+          "PrecB": 37,
+          "MinA": 147,
+          "MinB": 101,
+          "MinC": 30,
+          "FusionA": 50,
+          "FusionB": 38,
+          "FusionC": 28
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 1,
+          "mine": 2,
+          "smelter": 0
+        },
+        "research": 0
+      },
+      {
+        "turn": 30,
+        "population": 106,
+        "morale": 518,
+        "food": 572,
+        "power": [
+          1050,
+          34
+        ],
+        "workers": [
+          16,
+          84
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 228,
+          "MetalB": 118,
+          "MetalC": 142,
+          "MetalD": 124,
+          "PrecA": 57,
+          "PrecB": 34,
+          "MinA": 218,
+          "MinB": 129,
+          "MinC": 21,
+          "FusionA": 81,
+          "FusionB": 60,
+          "FusionC": 36
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 1,
+          "mine": 3,
+          "smelter": 0
+        },
+        "research": 0
+      },
+      {
+        "turn": 40,
+        "population": 112,
+        "morale": 490,
+        "food": 604,
+        "power": [
+          1050,
+          41
+        ],
+        "workers": [
+          20,
+          87
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 330,
+          "MetalB": 183,
+          "MetalC": 195,
+          "MetalD": 165,
+          "PrecA": 76,
+          "PrecB": 42,
+          "MinA": 318,
+          "MinB": 183,
+          "MinC": 38,
+          "FusionA": 118,
+          "FusionB": 86,
+          "FusionC": 49
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 2,
+          "mine": 3,
+          "smelter": 1
+        },
+        "research": 1
+      },
+      {
+        "turn": 50,
+        "population": 111,
+        "morale": 474,
+        "food": 691,
+        "power": [
+          1050,
+          46
+        ],
+        "workers": [
+          21,
+          84
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 410,
+          "MetalB": 226,
+          "MetalC": 214,
+          "MetalD": 174,
+          "PrecA": 78,
+          "PrecB": 29,
+          "MinA": 398,
+          "MinB": 216,
+          "MinC": 34,
+          "FusionA": 141,
+          "FusionB": 116,
+          "FusionC": 65
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 2,
+          "mine": 3,
+          "smelter": 1
+        },
+        "research": 1
+      },
+      {
+        "turn": 60,
+        "population": 114,
+        "morale": 504,
+        "food": 779,
+        "power": [
+          1050,
+          58
+        ],
+        "workers": [
+          25,
+          86
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 416,
+          "MetalB": 272,
+          "MetalC": 252,
+          "MetalD": 200,
+          "PrecA": 86,
+          "PrecB": 17,
+          "MinA": 416,
+          "MinB": 261,
+          "MinC": 54,
+          "FusionA": 180,
+          "FusionB": 146,
+          "FusionC": 81
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 2,
+          "mine": 4,
+          "smelter": 1
+        },
+        "research": 2
+      },
+      {
+        "turn": 70,
+        "population": 117,
+        "morale": 527,
+        "food": 864,
+        "power": [
+          1050,
+          59
+        ],
+        "workers": [
+          26,
+          90
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 416,
+          "MetalB": 354,
+          "MetalC": 318,
+          "MetalD": 239,
+          "PrecA": 107,
+          "PrecB": 26,
+          "MinA": 416,
+          "MinB": 326,
+          "MinC": 83,
+          "FusionA": 221,
+          "FusionB": 176,
+          "FusionC": 97
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 2,
+          "mine": 4,
+          "smelter": 1
+        },
+        "research": 3
+      },
+      {
+        "turn": 80,
+        "population": 117,
+        "morale": 476,
+        "food": 987,
+        "power": [
+          1050,
+          63
+        ],
+        "workers": [
+          29,
+          93
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 416,
+          "MetalB": 409,
+          "MetalC": 358,
+          "MetalD": 267,
+          "PrecA": 128,
+          "PrecB": 27,
+          "MinA": 416,
+          "MinB": 378,
+          "MinC": 98,
+          "FusionA": 265,
+          "FusionB": 208,
+          "FusionC": 115
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 3,
+          "mine": 4,
+          "smelter": 1
+        },
+        "research": 3
+      },
+      {
+        "turn": 90,
+        "population": 121,
+        "morale": 525,
+        "food": 1177,
+        "power": [
+          1050,
+          69
+        ],
+        "workers": [
+          31,
+          96
+        ],
+        "housing": 220,
+        "stock": {
+          "MetalA": 416,
+          "MetalB": 416,
+          "MetalC": 385,
+          "MetalD": 291,
+          "PrecA": 134,
+          "PrecB": 17,
+          "MinA": 416,
+          "MinB": 415,
+          "MinC": 116,
+          "FusionA": 308,
+          "FusionB": 239,
+          "FusionC": 133
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 3,
+          "mine": 4,
+          "smelter": 1
+        },
+        "research": 4
+      },
+      {
+        "turn": 100,
+        "population": 121,
+        "morale": 522,
+        "food": 1402,
+        "power": [
+          1050,
+          74
+        ],
+        "workers": [
+          33,
+          96
+        ],
+        "housing": 220,
+        "stock": {
+          "MetalA": 460,
+          "MetalB": 438,
+          "MetalC": 433,
+          "MetalD": 328,
+          "PrecA": 152,
+          "PrecB": 26,
+          "MinA": 456,
+          "MinB": 437,
+          "MinC": 150,
+          "FusionA": 353,
+          "FusionB": 273,
+          "FusionC": 153
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 3,
+          "mine": 4,
+          "smelter": 1
+        },
+        "research": 4
+      },
+      {
+        "turn": 110,
+        "population": 124,
+        "morale": 570,
+        "food": 1648,
+        "power": [
+          1050,
+          82
+        ],
+        "workers": [
+          36,
+          96
+        ],
+        "housing": 220,
+        "stock": {
+          "MetalA": 583,
+          "MetalB": 521,
+          "MetalC": 490,
+          "MetalD": 358,
+          "PrecA": 167,
+          "PrecB": 35,
+          "MinA": 583,
+          "MinB": 491,
+          "MinC": 170,
+          "FusionA": 399,
+          "FusionB": 308,
+          "FusionC": 176
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 4,
+          "mine": 5,
+          "smelter": 1
+        },
+        "research": 5
+      },
+      {
+        "turn": 120,
+        "population": 125,
+        "morale": 559,
+        "food": 1984,
+        "power": [
+          1050,
+          82
+        ],
+        "workers": [
+          36,
+          100
+        ],
+        "housing": 220,
+        "stock": {
+          "MetalA": 583,
+          "MetalB": 583,
+          "MetalC": 556,
+          "MetalD": 395,
+          "PrecA": 187,
+          "PrecB": 44,
+          "MinA": 583,
+          "MinB": 558,
+          "MinC": 202,
+          "FusionA": 444,
+          "FusionB": 344,
+          "FusionC": 205
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 4,
+          "mine": 5,
+          "smelter": 1
+        },
+        "research": 5
+      },
+      {
+        "turn": 130,
+        "population": 129,
+        "morale": 589,
+        "food": 2283,
+        "power": [
+          1050,
+          83
+        ],
+        "workers": [
+          37,
+          101
+        ],
+        "housing": 220,
+        "stock": {
+          "MetalA": 583,
+          "MetalB": 583,
+          "MetalC": 583,
+          "MetalD": 432,
+          "PrecA": 194,
+          "PrecB": 40,
+          "MinA": 583,
+          "MinB": 582,
+          "MinC": 220,
+          "FusionA": 490,
+          "FusionB": 381,
+          "FusionC": 233
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 4,
+          "mine": 5,
+          "smelter": 1
+        },
+        "research": 6
+      },
+      {
+        "turn": 140,
+        "population": 127,
+        "morale": 563,
+        "food": 2579,
+        "power": [
+          1050,
+          80
+        ],
+        "workers": [
+          37,
+          105
+        ],
+        "housing": 220,
+        "stock": {
+          "MetalA": 583,
+          "MetalB": 583,
+          "MetalC": 583,
+          "MetalD": 458,
+          "PrecA": 204,
+          "PrecB": 45,
+          "MinA": 583,
+          "MinB": 582,
+          "MinC": 245,
+          "FusionA": 535,
+          "FusionB": 417,
+          "FusionC": 262
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 4,
+          "mine": 5,
+          "smelter": 1
+        },
+        "research": 6
+      },
+      {
+        "turn": 150,
+        "population": 127,
+        "morale": 567,
+        "food": 2912,
+        "power": [
+          1000,
+          81
+        ],
+        "workers": [
+          36,
+          108
+        ],
+        "housing": 50,
+        "stock": {
+          "MetalA": 327,
+          "MetalB": 327,
+          "MetalC": 333,
+          "MetalD": 333,
+          "PrecA": 214,
+          "PrecB": 51,
+          "MinA": 327,
+          "MinB": 332,
+          "MinC": 266,
+          "FusionA": 333,
+          "FusionB": 333,
+          "FusionC": 290
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 4,
+          "mine": 5,
+          "smelter": 1
+        },
+        "research": 7
+      },
+      {
+        "turn": 160,
+        "population": 128,
+        "morale": 569,
+        "food": 3244,
+        "power": [
+          1000,
+          87
+        ],
+        "workers": [
+          36,
+          109
+        ],
+        "housing": 125,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 333,
+          "MetalC": 333,
+          "MetalD": 328,
+          "PrecA": 214,
+          "PrecB": 56,
+          "MinA": 333,
+          "MinB": 332,
+          "MinC": 271,
+          "FusionA": 333,
+          "FusionB": 333,
+          "FusionC": 309
+        },
+        "built": {
+          "residence": 5,
+          "agridome": 4,
+          "mine": 6,
+          "smelter": 1
+        },
+        "research": 8
+      },
+      {
+        "turn": 170,
+        "population": 131,
+        "morale": 527,
+        "food": 3436,
+        "power": [
+          1000,
+          87
+        ],
+        "workers": [
+          39,
+          113
+        ],
+        "housing": 125,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 333,
+          "MetalC": 333,
+          "MetalD": 333,
+          "PrecA": 215,
+          "PrecB": 59,
+          "MinA": 333,
+          "MinB": 332,
+          "MinC": 282,
+          "FusionA": 333,
+          "FusionB": 333,
+          "FusionC": 327
+        },
+        "built": {
+          "residence": 5,
+          "agridome": 4,
+          "mine": 6,
+          "smelter": 1
+        },
+        "research": 8
+      },
+      {
+        "turn": 180,
+        "population": 135,
+        "morale": 599,
+        "food": 3764,
+        "power": [
+          1000,
+          95
+        ],
+        "workers": [
+          42,
+          110
+        ],
+        "housing": 125,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 333,
+          "MetalC": 333,
+          "MetalD": 333,
+          "PrecA": 218,
+          "PrecB": 62,
+          "MinA": 333,
+          "MinB": 332,
+          "MinC": 297,
+          "FusionA": 333,
+          "FusionB": 333,
+          "FusionC": 333
+        },
+        "built": {
+          "residence": 5,
+          "agridome": 4,
+          "mine": 6,
+          "smelter": 1
+        },
+        "research": 9
+      },
+      {
+        "turn": 190,
+        "population": 137,
+        "morale": 622,
+        "food": 3951,
+        "power": [
+          1000,
+          88
+        ],
+        "workers": [
+          37,
+          112
+        ],
+        "housing": 125,
+        "stock": {
+          "MetalA": 324,
+          "MetalB": 324,
+          "MetalC": 324,
+          "MetalD": 327,
+          "PrecA": 219,
+          "PrecB": 63,
+          "MinA": 321,
+          "MinB": 319,
+          "MinC": 298,
+          "FusionA": 332,
+          "FusionB": 333,
+          "FusionC": 333
+        },
+        "built": {
+          "residence": 5,
+          "agridome": 4,
+          "mine": 6,
+          "smelter": 1
+        },
+        "research": 9
+      },
+      {
+        "turn": 200,
+        "population": 140,
+        "morale": 674,
+        "food": 4186,
+        "power": [
+          1000,
+          90
+        ],
+        "workers": [
+          41,
+          111
+        ],
+        "housing": 125,
+        "stock": {
+          "MetalA": 328,
+          "MetalB": 333,
+          "MetalC": 333,
+          "MetalD": 333,
+          "PrecA": 221,
+          "PrecB": 65,
+          "MinA": 328,
+          "MinB": 332,
+          "MinC": 307,
+          "FusionA": 333,
+          "FusionB": 333,
+          "FusionC": 333
+        },
+        "built": {
+          "residence": 5,
+          "agridome": 4,
+          "mine": 6,
+          "smelter": 1
+        },
+        "research": 10
+      },
+      {
+        "turn": 210,
+        "population": 144,
+        "morale": 680,
+        "food": 4171,
+        "power": [
+          0,
+          0
+        ],
+        "workers": [
+          43,
+          114
+        ],
+        "housing": 0,
+        "stock": {
+          "MetalA": 331,
+          "MetalB": 329,
+          "MetalC": 333,
+          "MetalD": 332,
+          "PrecA": 225,
+          "PrecB": 70,
+          "MinA": 333,
+          "MinB": 332,
+          "MinC": 325,
+          "FusionA": 333,
+          "FusionB": 333,
+          "FusionC": 333
+        },
+        "built": {
+          "residence": 5,
+          "agridome": 4,
+          "mine": 7,
+          "smelter": 1
+        },
+        "research": 11
+      },
+      {
+        "turn": 220,
+        "population": 147,
+        "morale": 635,
+        "food": 4185,
+        "power": [
+          1000,
+          103
+        ],
+        "workers": [
+          45,
+          118
+        ],
+        "housing": 125,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 333,
+          "MetalC": 333,
+          "MetalD": 333,
+          "PrecA": 230,
+          "PrecB": 75,
+          "MinA": 333,
+          "MinB": 332,
+          "MinC": 333,
+          "FusionA": 333,
+          "FusionB": 333,
+          "FusionC": 333
+        },
+        "built": {
+          "residence": 5,
+          "agridome": 4,
+          "mine": 7,
+          "smelter": 1
+        },
+        "research": 11
+      }
+    ]
+  },
+  {
+    "seed": 2,
+    "difficulty": "medium",
+    "planet": "vigil",
+    "ending": null,
+    "turns": [
+      {
+        "turn": 10,
+        "population": 0,
+        "morale": 576,
+        "food": 0,
+        "power": [
+          50,
+          0
+        ],
+        "workers": [
+          5,
+          0
+        ],
+        "housing": 120,
+        "stock": {
+          "MetalA": 132,
+          "MetalB": 90,
+          "MetalC": 82,
+          "MetalD": 82,
+          "PrecA": 50,
+          "PrecB": 50,
+          "MinA": 123,
+          "MinB": 91,
+          "MinC": 73,
+          "FusionA": 40,
+          "FusionB": 30,
+          "FusionC": 30
+        },
+        "built": {
+          "residence": 0,
+          "agridome": 0,
+          "mine": 1,
+          "smelter": 0
+        },
+        "research": 0
+      },
+      {
+        "turn": 20,
+        "population": 102,
+        "morale": 537,
+        "food": 579,
+        "power": [
+          1050,
+          22
+        ],
+        "workers": [
+          12,
+          80
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 143,
+          "MetalB": 79,
+          "MetalC": 105,
+          "MetalD": 105,
+          "PrecA": 40,
+          "PrecB": 44,
+          "MinA": 130,
+          "MinB": 98,
+          "MinC": 51,
+          "FusionA": 52,
+          "FusionB": 37,
+          "FusionC": 37
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 1,
+          "mine": 2,
+          "smelter": 0
+        },
+        "research": 0
+      },
+      {
+        "turn": 30,
+        "population": 103,
+        "morale": 516,
+        "food": 578,
+        "power": [
+          1050,
+          34
+        ],
+        "workers": [
+          16,
+          77
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 216,
+          "MetalB": 99,
+          "MetalC": 113,
+          "MetalD": 124,
+          "PrecA": 58,
+          "PrecB": 57,
+          "MinA": 212,
+          "MinB": 131,
+          "MinC": 89,
+          "FusionA": 86,
+          "FusionB": 68,
+          "FusionC": 63
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 1,
+          "mine": 3,
+          "smelter": 0
+        },
+        "research": 0
+      },
+      {
+        "turn": 40,
+        "population": 108,
+        "morale": 539,
+        "food": 614,
+        "power": [
+          1050,
+          39
+        ],
+        "workers": [
+          18,
+          75
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 329,
+          "MetalB": 159,
+          "MetalC": 143,
+          "MetalD": 168,
+          "PrecA": 77,
+          "PrecB": 77,
+          "MinA": 321,
+          "MinB": 183,
+          "MinC": 149,
+          "FusionA": 121,
+          "FusionB": 105,
+          "FusionC": 91
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 2,
+          "mine": 3,
+          "smelter": 1
+        },
+        "research": 1
+      },
+      {
+        "turn": 50,
+        "population": 108,
+        "morale": 472,
+        "food": 705,
+        "power": [
+          1050,
+          46
+        ],
+        "workers": [
+          21,
+          82
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 416,
+          "MetalB": 200,
+          "MetalC": 144,
+          "MetalD": 181,
+          "PrecA": 79,
+          "PrecB": 82,
+          "MinA": 410,
+          "MinB": 217,
+          "MinC": 188,
+          "FusionA": 139,
+          "FusionB": 143,
+          "FusionC": 119
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 2,
+          "mine": 3,
+          "smelter": 1
+        },
+        "research": 1
+      },
+      {
+        "turn": 60,
+        "population": 108,
+        "morale": 501,
+        "food": 797,
+        "power": [
+          1050,
+          58
+        ],
+        "workers": [
+          25,
+          81
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 416,
+          "MetalB": 253,
+          "MetalC": 163,
+          "MetalD": 217,
+          "PrecA": 86,
+          "PrecB": 85,
+          "MinA": 416,
+          "MinB": 263,
+          "MinC": 255,
+          "FusionA": 175,
+          "FusionB": 182,
+          "FusionC": 156
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 2,
+          "mine": 4,
+          "smelter": 1
+        },
+        "research": 2
+      },
+      {
+        "turn": 70,
+        "population": 113,
+        "morale": 526,
+        "food": 887,
+        "power": [
+          1050,
+          59
+        ],
+        "workers": [
+          26,
+          83
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 416,
+          "MetalB": 352,
+          "MetalC": 194,
+          "MetalD": 265,
+          "PrecA": 106,
+          "PrecB": 109,
+          "MinA": 416,
+          "MinB": 329,
+          "MinC": 331,
+          "FusionA": 213,
+          "FusionB": 223,
+          "FusionC": 210
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 2,
+          "mine": 4,
+          "smelter": 1
+        },
+        "research": 3
+      },
+      {
+        "turn": 80,
+        "population": 114,
+        "morale": 510,
+        "food": 1003,
+        "power": [
+          1050,
+          63
+        ],
+        "workers": [
+          29,
+          85
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 416,
+          "MetalB": 416,
+          "MetalC": 216,
+          "MetalD": 319,
+          "PrecA": 128,
+          "PrecB": 125,
+          "MinA": 416,
+          "MinB": 383,
+          "MinC": 394,
+          "FusionA": 255,
+          "FusionB": 267,
+          "FusionC": 267
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 3,
+          "mine": 4,
+          "smelter": 1
+        },
+        "research": 3
+      },
+      {
+        "turn": 90,
+        "population": 114,
+        "morale": 535,
+        "food": 1202,
+        "power": [
+          1050,
+          67
+        ],
+        "workers": [
+          30,
+          84
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 416,
+          "MetalB": 416,
+          "MetalC": 211,
+          "MetalD": 360,
+          "PrecA": 130,
+          "PrecB": 126,
+          "MinA": 416,
+          "MinB": 413,
+          "MinC": 416,
+          "FusionA": 291,
+          "FusionB": 306,
+          "FusionC": 329
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 3,
+          "mine": 4,
+          "smelter": 1
+        },
+        "research": 4
+      },
+      {
+        "turn": 100,
+        "population": 116,
+        "morale": 529,
+        "food": 1432,
+        "power": [
+          1050,
+          72
+        ],
+        "workers": [
+          32,
+          91
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 453,
+          "MetalB": 439,
+          "MetalC": 240,
+          "MetalD": 417,
+          "PrecA": 147,
+          "PrecB": 147,
+          "MinA": 445,
+          "MinB": 428,
+          "MinC": 430,
+          "FusionA": 327,
+          "FusionB": 346,
+          "FusionC": 392
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 3,
+          "mine": 4,
+          "smelter": 1
+        },
+        "research": 4
+      },
+      {
+        "turn": 110,
+        "population": 121,
+        "morale": 571,
+        "food": 1681,
+        "power": [
+          1050,
+          81
+        ],
+        "workers": [
+          35,
+          96
+        ],
+        "housing": 220,
+        "stock": {
+          "MetalA": 583,
+          "MetalB": 549,
+          "MetalC": 263,
+          "MetalD": 468,
+          "PrecA": 161,
+          "PrecB": 168,
+          "MinA": 575,
+          "MinB": 480,
+          "MinC": 476,
+          "FusionA": 372,
+          "FusionB": 391,
+          "FusionC": 464
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 4,
+          "mine": 5,
+          "smelter": 1
+        },
+        "research": 5
+      },
+      {
+        "turn": 120,
+        "population": 126,
+        "morale": 562,
+        "food": 2017,
+        "power": [
+          1050,
+          79
+        ],
+        "workers": [
+          34,
+          98
+        ],
+        "housing": 220,
+        "stock": {
+          "MetalA": 583,
+          "MetalB": 583,
+          "MetalC": 275,
+          "MetalD": 509,
+          "PrecA": 186,
+          "PrecB": 189,
+          "MinA": 583,
+          "MinB": 564,
+          "MinC": 549,
+          "FusionA": 437,
+          "FusionB": 450,
+          "FusionC": 553
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 4,
+          "mine": 5,
+          "smelter": 1
+        },
+        "research": 5
+      },
+      {
+        "turn": 130,
+        "population": 127,
+        "morale": 563,
+        "food": 2350,
+        "power": [
+          1050,
+          85
+        ],
+        "workers": [
+          38,
+          100
+        ],
+        "housing": 220,
+        "stock": {
+          "MetalA": 583,
+          "MetalB": 583,
+          "MetalC": 304,
+          "MetalD": 567,
+          "PrecA": 198,
+          "PrecB": 199,
+          "MinA": 583,
+          "MinB": 582,
+          "MinC": 583,
+          "FusionA": 495,
+          "FusionB": 505,
+          "FusionC": 583
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 4,
+          "mine": 5,
+          "smelter": 1
+        },
+        "research": 6
+      },
+      {
+        "turn": 140,
+        "population": 128,
+        "morale": 535,
+        "food": 2684,
+        "power": [
+          1050,
+          85
+        ],
+        "workers": [
+          38,
+          101
+        ],
+        "housing": 220,
+        "stock": {
+          "MetalA": 583,
+          "MetalB": 583,
+          "MetalC": 328,
+          "MetalD": 583,
+          "PrecA": 208,
+          "PrecB": 215,
+          "MinA": 583,
+          "MinB": 582,
+          "MinC": 583,
+          "FusionA": 550,
+          "FusionB": 561,
+          "FusionC": 583
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 4,
+          "mine": 5,
+          "smelter": 1
+        },
+        "research": 6
+      },
+      {
+        "turn": 150,
+        "population": 132,
+        "morale": 565,
+        "food": 3015,
+        "power": [
+          1000,
+          85
+        ],
+        "workers": [
+          38,
+          102
+        ],
+        "housing": 100,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 333,
+          "MetalC": 333,
+          "MetalD": 333,
+          "PrecA": 221,
+          "PrecB": 235,
+          "MinA": 333,
+          "MinB": 332,
+          "MinC": 333,
+          "FusionA": 333,
+          "FusionB": 333,
+          "FusionC": 333
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 4,
+          "mine": 5,
+          "smelter": 1
+        },
+        "research": 7
+      },
+      {
+        "turn": 160,
+        "population": 131,
+        "morale": 558,
+        "food": 3343,
+        "power": [
+          1000,
+          92
+        ],
+        "workers": [
+          40,
+          102
+        ],
+        "housing": 125,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 333,
+          "MetalC": 333,
+          "MetalD": 333,
+          "PrecA": 221,
+          "PrecB": 241,
+          "MinA": 333,
+          "MinB": 332,
+          "MinC": 333,
+          "FusionA": 333,
+          "FusionB": 333,
+          "FusionC": 333
+        },
+        "built": {
+          "residence": 5,
+          "agridome": 4,
+          "mine": 6,
+          "smelter": 1
+        },
+        "research": 7
+      },
+      {
+        "turn": 170,
+        "population": 133,
+        "morale": 555,
+        "food": 3670,
+        "power": [
+          1000,
+          91
+        ],
+        "workers": [
+          39,
+          106
+        ],
+        "housing": 125,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 333,
+          "MetalC": 333,
+          "MetalD": 333,
+          "PrecA": 219,
+          "PrecB": 250,
+          "MinA": 333,
+          "MinB": 332,
+          "MinC": 333,
+          "FusionA": 333,
+          "FusionB": 333,
+          "FusionC": 333
+        },
+        "built": {
+          "residence": 5,
+          "agridome": 4,
+          "mine": 6,
+          "smelter": 1
+        },
+        "research": 8
+      },
+      {
+        "turn": 180,
+        "population": 137,
+        "morale": 613,
+        "food": 3997,
+        "power": [
+          1000,
+          95
+        ],
+        "workers": [
+          42,
+          108
+        ],
+        "housing": 125,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 333,
+          "MetalC": 333,
+          "MetalD": 333,
+          "PrecA": 223,
+          "PrecB": 265,
+          "MinA": 333,
+          "MinB": 332,
+          "MinC": 333,
+          "FusionA": 333,
+          "FusionB": 333,
+          "FusionC": 333
+        },
+        "built": {
+          "residence": 5,
+          "agridome": 4,
+          "mine": 6,
+          "smelter": 1
+        },
+        "research": 9
+      },
+      {
+        "turn": 190,
+        "population": 139,
+        "morale": 633,
+        "food": 4186,
+        "power": [
+          1000,
+          95
+        ],
+        "workers": [
+          42,
+          110
+        ],
+        "housing": 125,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 333,
+          "MetalC": 333,
+          "MetalD": 333,
+          "PrecA": 227,
+          "PrecB": 282,
+          "MinA": 333,
+          "MinB": 332,
+          "MinC": 333,
+          "FusionA": 333,
+          "FusionB": 333,
+          "FusionC": 333
+        },
+        "built": {
+          "residence": 5,
+          "agridome": 4,
+          "mine": 6,
+          "smelter": 1
+        },
+        "research": 9
+      },
+      {
+        "turn": 200,
+        "population": 144,
+        "morale": 683,
+        "food": 4186,
+        "power": [
+          1000,
+          95
+        ],
+        "workers": [
+          42,
+          111
+        ],
+        "housing": 125,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 333,
+          "MetalC": 333,
+          "MetalD": 333,
+          "PrecA": 230,
+          "PrecB": 300,
+          "MinA": 333,
+          "MinB": 332,
+          "MinC": 333,
+          "FusionA": 333,
+          "FusionB": 333,
+          "FusionC": 333
+        },
+        "built": {
+          "residence": 5,
+          "agridome": 4,
+          "mine": 6,
+          "smelter": 1
+        },
+        "research": 10
+      },
+      {
+        "turn": 210,
+        "population": 151,
+        "morale": 681,
+        "food": 4185,
+        "power": [
+          1000,
+          103
+        ],
+        "workers": [
+          45,
+          113
+        ],
+        "housing": 125,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 333,
+          "MetalC": 333,
+          "MetalD": 333,
+          "PrecA": 235,
+          "PrecB": 319,
+          "MinA": 333,
+          "MinB": 332,
+          "MinC": 333,
+          "FusionA": 333,
+          "FusionB": 333,
+          "FusionC": 333
+        },
+        "built": {
+          "residence": 5,
+          "agridome": 4,
+          "mine": 7,
+          "smelter": 1
+        },
+        "research": 10
+      },
+      {
+        "turn": 220,
+        "population": 156,
+        "morale": 719,
+        "food": 4185,
+        "power": [
+          1000,
+          105
+        ],
+        "workers": [
+          46,
+          118
+        ],
+        "housing": 150,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 333,
+          "MetalC": 333,
+          "MetalD": 333,
+          "PrecA": 241,
+          "PrecB": 333,
+          "MinA": 333,
+          "MinB": 332,
+          "MinC": 333,
+          "FusionA": 333,
+          "FusionB": 333,
+          "FusionC": 333
+        },
+        "built": {
+          "residence": 6,
+          "agridome": 4,
+          "mine": 7,
+          "smelter": 1
+        },
+        "research": 11
+      }
+    ]
+  },
+  {
+    "seed": 3,
+    "difficulty": "medium",
+    "planet": "vigil",
+    "ending": null,
+    "turns": [
+      {
+        "turn": 10,
+        "population": 0,
+        "morale": 576,
+        "food": 0,
+        "power": [
+          50,
+          0
+        ],
+        "workers": [
+          5,
+          0
+        ],
+        "housing": 120,
+        "stock": {
+          "MetalA": 132,
+          "MetalB": 90,
+          "MetalC": 82,
+          "MetalD": 82,
+          "PrecA": 50,
+          "PrecB": 50,
+          "MinA": 123,
+          "MinB": 91,
+          "MinC": 73,
+          "FusionA": 40,
+          "FusionB": 30,
+          "FusionC": 30
+        },
+        "built": {
+          "residence": 0,
+          "agridome": 0,
+          "mine": 1,
+          "smelter": 0
+        },
+        "research": 0
+      },
+      {
+        "turn": 20,
+        "population": 103,
+        "morale": 538,
+        "food": 578,
+        "power": [
+          1050,
+          27
+        ],
+        "workers": [
+          13,
+          86
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 210,
+          "MetalB": 76,
+          "MetalC": 80,
+          "MetalD": 98,
+          "PrecA": 40,
+          "PrecB": 54,
+          "MinA": 200,
+          "MinB": 97,
+          "MinC": 78,
+          "FusionA": 45,
+          "FusionB": 35,
+          "FusionC": 28
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 1,
+          "mine": 2,
+          "smelter": 0
+        },
+        "research": 0
+      },
+      {
+        "turn": 30,
+        "population": 108,
+        "morale": 522,
+        "food": 572,
+        "power": [
+          1050,
+          34
+        ],
+        "workers": [
+          16,
+          85
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 392,
+          "MetalB": 85,
+          "MetalC": 67,
+          "MetalD": 107,
+          "PrecA": 46,
+          "PrecB": 60,
+          "MinA": 351,
+          "MinB": 94,
+          "MinC": 100,
+          "FusionA": 78,
+          "FusionB": 41,
+          "FusionC": 26
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 1,
+          "mine": 3,
+          "smelter": 0
+        },
+        "research": 0
+      },
+      {
+        "turn": 40,
+        "population": 112,
+        "morale": 540,
+        "food": 602,
+        "power": [
+          1050,
+          41
+        ],
+        "workers": [
+          20,
+          86
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 416,
+          "MetalB": 133,
+          "MetalC": 77,
+          "MetalD": 139,
+          "PrecA": 49,
+          "PrecB": 76,
+          "MinA": 416,
+          "MinB": 101,
+          "MinC": 140,
+          "FusionA": 125,
+          "FusionB": 47,
+          "FusionC": 24
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 2,
+          "mine": 3,
+          "smelter": 1
+        },
+        "research": 1
+      },
+      {
+        "turn": 50,
+        "population": 117,
+        "morale": 479,
+        "food": 689,
+        "power": [
+          1050,
+          41
+        ],
+        "workers": [
+          20,
+          87
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 411,
+          "MetalB": 158,
+          "MetalC": 54,
+          "MetalD": 138,
+          "PrecA": 33,
+          "PrecB": 71,
+          "MinA": 411,
+          "MinB": 82,
+          "MinC": 154,
+          "FusionA": 141,
+          "FusionB": 51,
+          "FusionC": 22
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 2,
+          "mine": 3,
+          "smelter": 1
+        },
+        "research": 1
+      },
+      {
+        "turn": 60,
+        "population": 123,
+        "morale": 507,
+        "food": 769,
+        "power": [
+          1050,
+          60
+        ],
+        "workers": [
+          27,
+          89
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 416,
+          "MetalB": 190,
+          "MetalC": 58,
+          "MetalD": 172,
+          "PrecA": 25,
+          "PrecB": 75,
+          "MinA": 416,
+          "MinB": 74,
+          "MinC": 182,
+          "FusionA": 174,
+          "FusionB": 58,
+          "FusionC": 20
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 2,
+          "mine": 4,
+          "smelter": 1
+        },
+        "research": 2
+      },
+      {
+        "turn": 70,
+        "population": 122,
+        "morale": 523,
+        "food": 846,
+        "power": [
+          1050,
+          61
+        ],
+        "workers": [
+          28,
+          94
+        ],
+        "housing": 195,
+        "stock": {
+          "MetalA": 416,
+          "MetalB": 279,
+          "MetalC": 104,
+          "MetalD": 232,
+          "PrecA": 28,
+          "PrecB": 68,
+          "MinA": 416,
+          "MinB": 91,
+          "MinC": 227,
+          "FusionA": 213,
+          "FusionB": 66,
+          "FusionC": 18
+        },
+        "built": {
+          "residence": 3,
+          "agridome": 2,
+          "mine": 4,
+          "smelter": 1
+        },
+        "research": 3
+      },
+      {
+        "turn": 80,
+        "population": 127,
+        "morale": 517,
+        "food": 952,
+        "power": [
+          1050,
+          65
+        ],
+        "workers": [
+          30,
+          96
+        ],
+        "housing": 220,
+        "stock": {
+          "MetalA": 416,
+          "MetalB": 353,
+          "MetalC": 145,
+          "MetalD": 293,
+          "PrecA": 29,
+          "PrecB": 77,
+          "MinA": 416,
+          "MinB": 90,
+          "MinC": 246,
+          "FusionA": 250,
+          "FusionB": 70,
+          "FusionC": 16
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 3,
+          "mine": 4,
+          "smelter": 1
+        },
+        "research": 3
+      },
+      {
+        "turn": 90,
+        "population": 127,
+        "morale": 520,
+        "food": 1130,
+        "power": [
+          1050,
+          67
+        ],
+        "workers": [
+          30,
+          98
+        ],
+        "housing": 220,
+        "stock": {
+          "MetalA": 416,
+          "MetalB": 416,
+          "MetalC": 158,
+          "MetalD": 341,
+          "PrecA": 18,
+          "PrecB": 74,
+          "MinA": 416,
+          "MinB": 86,
+          "MinC": 286,
+          "FusionA": 289,
+          "FusionB": 77,
+          "FusionC": 14
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 3,
+          "mine": 4,
+          "smelter": 1
+        },
+        "research": 4
+      },
+      {
+        "turn": 100,
+        "population": 132,
+        "morale": 525,
+        "food": 1334,
+        "power": [
+          1050,
+          74
+        ],
+        "workers": [
+          33,
+          100
+        ],
+        "housing": 220,
+        "stock": {
+          "MetalA": 481,
+          "MetalB": 434,
+          "MetalC": 202,
+          "MetalD": 405,
+          "PrecA": 20,
+          "PrecB": 87,
+          "MinA": 463,
+          "MinB": 100,
+          "MinC": 330,
+          "FusionA": 328,
+          "FusionB": 85,
+          "FusionC": 12
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 3,
+          "mine": 4,
+          "smelter": 1
+        },
+        "research": 4
+      },
+      {
+        "turn": 110,
+        "population": 129,
+        "morale": 543,
+        "food": 1571,
+        "power": [
+          1050,
+          82
+        ],
+        "workers": [
+          36,
+          101
+        ],
+        "housing": 220,
+        "stock": {
+          "MetalA": 583,
+          "MetalB": 515,
+          "MetalC": 232,
+          "MetalD": 455,
+          "PrecA": 20,
+          "PrecB": 102,
+          "MinA": 583,
+          "MinB": 107,
+          "MinC": 368,
+          "FusionA": 378,
+          "FusionB": 98,
+          "FusionC": 19
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 4,
+          "mine": 5,
+          "smelter": 1
+        },
+        "research": 5
+      },
+      {
+        "turn": 120,
+        "population": 133,
+        "morale": 543,
+        "food": 1866,
+        "power": [
+          1050,
+          82
+        ],
+        "workers": [
+          36,
+          104
+        ],
+        "housing": 220,
+        "stock": {
+          "MetalA": 583,
+          "MetalB": 583,
+          "MetalC": 265,
+          "MetalD": 509,
+          "PrecA": 33,
+          "PrecB": 127,
+          "MinA": 583,
+          "MinB": 151,
+          "MinC": 444,
+          "FusionA": 440,
+          "FusionB": 120,
+          "FusionC": 32
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 4,
+          "mine": 5,
+          "smelter": 1
+        },
+        "research": 5
+      },
+      {
+        "turn": 130,
+        "population": 135,
+        "morale": 538,
+        "food": 2192,
+        "power": [
+          1050,
+          80
+        ],
+        "workers": [
+          37,
+          105
+        ],
+        "housing": 220,
+        "stock": {
+          "MetalA": 583,
+          "MetalB": 583,
+          "MetalC": 306,
+          "MetalD": 569,
+          "PrecA": 35,
+          "PrecB": 140,
+          "MinA": 583,
+          "MinB": 186,
+          "MinC": 513,
+          "FusionA": 495,
+          "FusionB": 145,
+          "FusionC": 47
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 4,
+          "mine": 5,
+          "smelter": 1
+        },
+        "research": 6
+      },
+      {
+        "turn": 140,
+        "population": 140,
+        "morale": 571,
+        "food": 2515,
+        "power": [
+          1050,
+          85
+        ],
+        "workers": [
+          38,
+          109
+        ],
+        "housing": 220,
+        "stock": {
+          "MetalA": 583,
+          "MetalB": 583,
+          "MetalC": 350,
+          "MetalD": 583,
+          "PrecA": 42,
+          "PrecB": 167,
+          "MinA": 583,
+          "MinB": 231,
+          "MinC": 583,
+          "FusionA": 564,
+          "FusionB": 171,
+          "FusionC": 65
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 4,
+          "mine": 5,
+          "smelter": 1
+        },
+        "research": 7
+      },
+      {
+        "turn": 150,
+        "population": 144,
+        "morale": 565,
+        "food": 2834,
+        "power": [
+          1000,
+          85
+        ],
+        "workers": [
+          38,
+          108
+        ],
+        "housing": 100,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 333,
+          "MetalC": 333,
+          "MetalD": 333,
+          "PrecA": 49,
+          "PrecB": 194,
+          "MinA": 333,
+          "MinB": 277,
+          "MinC": 333,
+          "FusionA": 333,
+          "FusionB": 199,
+          "FusionC": 83
+        },
+        "built": {
+          "residence": 4,
+          "agridome": 4,
+          "mine": 5,
+          "smelter": 1
+        },
+        "research": 7
+      },
+      {
+        "turn": 160,
+        "population": 148,
+        "morale": 583,
+        "food": 3113,
+        "power": [
+          1000,
+          84
+        ],
+        "workers": [
+          37,
+          113
+        ],
+        "housing": 125,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 332,
+          "MetalC": 333,
+          "MetalD": 332,
+          "PrecA": 44,
+          "PrecB": 207,
+          "MinA": 333,
+          "MinB": 285,
+          "MinC": 333,
+          "FusionA": 333,
+          "FusionB": 215,
+          "FusionC": 94
+        },
+        "built": {
+          "residence": 5,
+          "agridome": 4,
+          "mine": 6,
+          "smelter": 1
+        },
+        "research": 8
+      },
+      {
+        "turn": 170,
+        "population": 150,
+        "morale": 564,
+        "food": 3424,
+        "power": [
+          1000,
+          87
+        ],
+        "workers": [
+          39,
+          113
+        ],
+        "housing": 125,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 326,
+          "MetalC": 330,
+          "MetalD": 323,
+          "PrecA": 34,
+          "PrecB": 216,
+          "MinA": 333,
+          "MinB": 289,
+          "MinC": 332,
+          "FusionA": 331,
+          "FusionB": 230,
+          "FusionC": 101
+        },
+        "built": {
+          "residence": 5,
+          "agridome": 4,
+          "mine": 6,
+          "smelter": 1
+        },
+        "research": 8
+      },
+      {
+        "turn": 180,
+        "population": 157,
+        "morale": 632,
+        "food": 3732,
+        "power": [
+          1000,
+          98
+        ],
+        "workers": [
+          44,
+          115
+        ],
+        "housing": 125,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 333,
+          "MetalC": 333,
+          "MetalD": 332,
+          "PrecA": 27,
+          "PrecB": 228,
+          "MinA": 333,
+          "MinB": 291,
+          "MinC": 333,
+          "FusionA": 333,
+          "FusionB": 240,
+          "FusionC": 102
+        },
+        "built": {
+          "residence": 5,
+          "agridome": 4,
+          "mine": 6,
+          "smelter": 1
+        },
+        "research": 9
+      },
+      {
+        "turn": 190,
+        "population": 161,
+        "morale": 657,
+        "food": 4034,
+        "power": [
+          1000,
+          98
+        ],
+        "workers": [
+          44,
+          118
+        ],
+        "housing": 125,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 333,
+          "MetalC": 333,
+          "MetalD": 333,
+          "PrecA": 20,
+          "PrecB": 239,
+          "MinA": 333,
+          "MinB": 292,
+          "MinC": 333,
+          "FusionA": 333,
+          "FusionB": 248,
+          "FusionC": 101
+        },
+        "built": {
+          "residence": 5,
+          "agridome": 4,
+          "mine": 6,
+          "smelter": 1
+        },
+        "research": 10
+      },
+      {
+        "turn": 200,
+        "population": 164,
+        "morale": 668,
+        "food": 4184,
+        "power": [
+          1000,
+          98
+        ],
+        "workers": [
+          44,
+          119
+        ],
+        "housing": 125,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 333,
+          "MetalC": 333,
+          "MetalD": 333,
+          "PrecA": 12,
+          "PrecB": 251,
+          "MinA": 333,
+          "MinB": 293,
+          "MinC": 333,
+          "FusionA": 333,
+          "FusionB": 256,
+          "FusionC": 100
+        },
+        "built": {
+          "residence": 5,
+          "agridome": 4,
+          "mine": 6,
+          "smelter": 1
+        },
+        "research": 10
+      },
+      {
+        "turn": 210,
+        "population": 167,
+        "morale": 665,
+        "food": 4183,
+        "power": [
+          1000,
+          105
+        ],
+        "workers": [
+          46,
+          123
+        ],
+        "housing": 150,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 331,
+          "MetalC": 333,
+          "MetalD": 333,
+          "PrecA": 2,
+          "PrecB": 263,
+          "MinA": 333,
+          "MinB": 291,
+          "MinC": 333,
+          "FusionA": 333,
+          "FusionB": 264,
+          "FusionC": 98
+        },
+        "built": {
+          "residence": 6,
+          "agridome": 4,
+          "mine": 7,
+          "smelter": 1
+        },
+        "research": 11
+      },
+      {
+        "turn": 220,
+        "population": 172,
+        "morale": 681,
+        "food": 4183,
+        "power": [
+          1000,
+          97
+        ],
+        "workers": [
+          43,
+          129
+        ],
+        "housing": 150,
+        "stock": {
+          "MetalA": 333,
+          "MetalB": 333,
+          "MetalC": 333,
+          "MetalD": 333,
+          "PrecA": 1,
+          "PrecB": 272,
+          "MinA": 333,
+          "MinB": 292,
+          "MinC": 333,
+          "FusionA": 333,
+          "FusionB": 271,
+          "FusionC": 96
+        },
+        "built": {
+          "residence": 6,
+          "agridome": 4,
+          "mine": 7,
+          "smelter": 1
+        },
+        "research": 11
+      }
+    ]
+  }
+]

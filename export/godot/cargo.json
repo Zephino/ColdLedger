@@ -1,0 +1,156 @@
+{
+  "cargo": [
+    {
+      "id": "colonists",
+      "name": "Colonists (50)",
+      "weight": 1,
+      "cost": 1,
+      "landed": false,
+      "max": 10,
+      "desc": "Fifty more colonists. Each fifty need a Colonist Lander."
+    },
+    {
+      "id": "food",
+      "name": "Food",
+      "weight": 1,
+      "cost": 1,
+      "landed": true,
+      "max": 20,
+      "desc": "Feeds the colony while the first AgriDome is built."
+    },
+    {
+      "id": "lifeSupport",
+      "name": "Life Support",
+      "weight": 1,
+      "cost": 3,
+      "landed": true,
+      "max": 20,
+      "desc": "Keeps colonists breathing until a CHAP is built."
+    },
+    {
+      "id": "colonistLander",
+      "name": "Colonist Lander",
+      "weight": 9,
+      "cost": 16,
+      "landed": false,
+      "max": 6,
+      "desc": "Carries 50 colonists one way to the surface."
+    },
+    {
+      "id": "cargoLander",
+      "name": "Cargo Lander",
+      "weight": 10,
+      "cost": 17,
+      "landed": false,
+      "max": 4,
+      "desc": "Carries a cargo weight of 20 one way to the surface."
+    },
+    {
+      "id": "seedFactory",
+      "name": "Seed Factory",
+      "weight": 10,
+      "cost": 18,
+      "landed": false,
+      "max": 1,
+      "desc": "Power, robots, ore processing and temporary housing. Required."
+    },
+    {
+      "id": "tokamak",
+      "name": "Tokamak Reactor",
+      "weight": 10,
+      "cost": 20,
+      "landed": true,
+      "max": 1,
+      "desc": "Covers most power needs on most worlds."
+    },
+    {
+      "id": "solarSat",
+      "name": "Solar Power Satellite",
+      "weight": 8,
+      "cost": 15,
+      "landed": false,
+      "max": 1,
+      "desc": "Safe orbital power for worlds near their star. Needs receivers."
+    },
+    {
+      "id": "solarReceiver",
+      "name": "Solar Receiver Array",
+      "weight": 5,
+      "cost": 10,
+      "landed": true,
+      "max": 2,
+      "desc": "Receives power from the Solar Power Satellite."
+    },
+    {
+      "id": "geoProbe",
+      "name": "Geological Probe",
+      "weight": 4,
+      "cost": 14,
+      "landed": false,
+      "max": 1,
+      "desc": "Shows mining sites and digging depth before landing."
+    },
+    {
+      "id": "weatherSat",
+      "name": "Weather Satellite",
+      "weight": 4,
+      "cost": 12,
+      "landed": false,
+      "max": 1,
+      "desc": "Warns of storms. Reduces storm damage."
+    },
+    {
+      "id": "interstellarProbe",
+      "name": "Interstellar Probe",
+      "weight": 0,
+      "cost": 15,
+      "landed": false,
+      "max": 1,
+      "desc": "Detailed data on every planet in the system."
+    },
+    {
+      "id": "comsat",
+      "name": "Communications Satellite",
+      "weight": 4,
+      "cost": 11,
+      "landed": false,
+      "max": 1,
+      "desc": "Robots never lose contact."
+    },
+    {
+      "id": "observer",
+      "name": "Orbital Observer",
+      "weight": 6,
+      "cost": 13,
+      "landed": false,
+      "max": 1,
+      "desc": "Keeps watch on the other colony."
+    },
+    {
+      "id": "ulbi",
+      "name": "ULBI Probe",
+      "weight": 0,
+      "cost": 14,
+      "landed": false,
+      "max": 1,
+      "desc": "Specific data about the target system's planets."
+    }
+  ],
+  "recommended": {
+    "colonists": 0,
+    "food": 6,
+    "lifeSupport": 4,
+    "colonistLander": 2,
+    "cargoLander": 1,
+    "seedFactory": 1,
+    "tokamak": 1,
+    "solarSat": 0,
+    "solarReceiver": 0,
+    "geoProbe": 1,
+    "weatherSat": 1,
+    "interstellarProbe": 0,
+    "comsat": 1,
+    "observer": 0,
+    "ulbi": 1
+  }
+}

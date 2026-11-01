@@ -1,0 +1,193 @@
+{
+  "briefing": [
+    "The ark Meridian left the dying Earth with nine thousand sleepers and a crew of four hundred. It arrived at Kestrel's Lamp with a cracked reactor, forty-one dead officers, and you.",
+    "You were the ship's comptroller. You counted fuel, rations and berths. Now you are the highest-ranking officer alive, and the colony's survival is yours to count.",
+    "The ship's records do not add up. The Survival Trust, the cartel that financed the Meridian, sold berths that were never filled, and sealed contracts promise its Board members the best of whatever you build.",
+    "Pack the ship. Choose a world. Build a colony that lasts. Then decide what the colony is for: a new ark, a living world, or a charter that ends the Trust's hold for good."
+  ],
+  "factions": {
+    "faculty": {
+      "name": "The Faculty",
+      "desc": "Scientists and teachers from the ark's research decks. They want labs, schools and the truth."
+    },
+    "crews": {
+      "name": "The Crews",
+      "desc": "Engineers, miners and dome hands. They want fair shares and safe shifts."
+    },
+    "wardens": {
+      "name": "The Wardens",
+      "desc": "Ship security, now colony police. They want order and a clear chain of command."
+    },
+    "board": {
+      "name": "The Board",
+      "desc": "Survivors of the Survival Trust that financed the ark. They hold sealed contracts and expect them honored."
+    }
+  },
+  "endings": {
+    "secondArk": {
+      "title": "Second Ark",
+      "text": "The rebuilt Meridian climbs out of the twilight band on a column of light. The colony did not just survive; it built the means to carry humanity further. Every berth on this ship was assigned by lottery, and the list is public."
+    },
+    "greenHorizon": {
+      "title": "Green Horizon",
+      "text": "The first colonist to walk the terminator without a mask does it at dawn, which on Vigil never ends. The air holds. The domes are opened one by one. The world is home."
+    },
+    "openCharter": {
+      "title": "Open Charter",
+      "text": "The Ledger goes out on every channel: berths sold, pods emptied, contracts written to outlive the people who signed them. By the next muster the sealed contracts are void, the Board's stores are common stock, and the Free Berth delegates sit at the same table as your council."
+    },
+    "boardRule": {
+      "title": "The Trust Endures",
+      "text": "The ark launches on schedule, its best berths reserved for the Board, as the contracts always said they would be. You are aboard. History will record the colony as a success. The Ledger stays sealed."
+    },
+    "ghostTown": {
+      "title": "Ghost Town",
+      "text": "The last lights in the domes go dark. The tubes still hum with power for a while, carrying air to rooms where no one breathes. The Ledger closes with a balance of zero."
+    }
+  },
+  "events": [
+    {
+      "id": "memorial",
+      "title": "Forty-One Names",
+      "repeatable": false,
+      "sampleBody": "The crews have carved the names of the dead officers into a hull plate salvaged from the seed lander. They ask whether you will speak at the memorial.",
+      "choices": [
+        "Speak, and promise an honest count.",
+        "Keep it brief; there is work to do."
+      ]
+    },
+    {
+      "id": "berthList",
+      "title": "The Berth List",
+      "repeatable": false,
+      "sampleBody": "A crew engineer restoring the lander's memory core finds the original berth list. Beside two hundred names is a single annotation: SURVIVAL TRUST — PAID IN FULL. None of those names were among the sleepers who woke.",
+      "choices": [
+        "Seal the file. Morale is fragile enough.",
+        "Enter it in the Ledger, quietly.",
+        "Read it aloud at muster."
+      ]
+    },
+    {
+      "id": "sealedContract",
+      "title": "Sealed Contracts",
+      "repeatable": false,
+      "sampleBody": "The Board presents sealed contracts signed on Earth. They grant Trust members first claim on housing and a double ration of luxuries, 'in consideration of capital advanced'.",
+      "choices": [
+        "Honor them. Contracts are contracts.",
+        "Refuse. There is no Earth to enforce them.",
+        "Renegotiate the terms (Economics)."
+      ]
+    },
+    {
+      "id": "faculty",
+      "title": "The Faculty Petition",
+      "repeatable": false,
+      "sampleBody": "The Faculty asks for precious metals to restart the ark's teaching seminar. 'Ignorance is the most expensive thing we could import,' their letter says.",
+      "choices": [
+        "Fund it (20 Precious Metal B).",
+        "Not now."
+      ]
+    },
+    {
+      "id": "wardens",
+      "title": "The Armory Request",
+      "repeatable": false,
+      "sampleBody": "The Wardens want to unseal the ship's armory. 'The Free Berth people took weapons when they split off. We should be ready.'",
+      "choices": [
+        "Approve it.",
+        "Deny it."
+      ]
+    },
+    {
+      "id": "envoy",
+      "title": "An Envoy From Free Berth",
+      "repeatable": false,
+      "sampleBody": "A rover from the Free Berth colony stops at the edge of your mining zone. Their envoy carries a data slate and an offer to talk. Free Berth holds about 53 people.",
+      "choices": [
+        "Receive the envoy.",
+        "Turn the rover away.",
+        "Detain the envoy and take the slate."
+      ]
+    },
+    {
+      "id": "crates",
+      "title": "Trust Reserve",
+      "repeatable": false,
+      "sampleBody": "An audit of the lander holds finds forty tonnes of cargo listed as 'Trust reserve — not for colonial use'. The seals are Board seals.",
+      "choices": [
+        "Open the crates.",
+        "Leave them sealed."
+      ]
+    },
+    {
+      "id": "ghosts",
+      "title": "Empty Pods",
+      "repeatable": false,
+      "sampleBody": "Cryo logs show forty pods registered to paying passengers were never filled. Their power, air and berth weight went to Trust cargo. Somewhere on Earth, those passengers were told they were aboard.",
+      "choices": [
+        "Record it."
+      ]
+    },
+    {
+      "id": "storm",
+      "title": "Terminator Front",
+      "repeatable": true,
+      "sampleBody": "The weather crews track a storm wall moving along the twilight band toward the colony. The Wardens want to pull surface crews into shelter for the next few turns.",
+      "choices": [
+        "Shelter the crews.",
+        "Keep working."
+      ]
+    },
+    {
+      "id": "strike",
+      "title": "Shift Strike",
+      "repeatable": true,
+      "sampleBody": "The Crews have downed tools. They say the Board's quarters get air and heat priority while dome hands work double shifts.",
+      "choices": [
+        "Concede: share the luxury stock (20 luxuries).",
+        "Order the Wardens to break it.",
+        "Let it run its course."
+      ]
+    },
+    {
+      "id": "offer",
+      "title": "A Berth For The Comptroller",
+      "repeatable": false,
+      "sampleBody": "A Board envoy visits your quarters after midnight. If you hand over the Ledger, the Trust will see you have a stateroom on the rebuilt ark, 'and your name on its dedication plate'.",
+      "choices": [
+        "Accept.",
+        "Refuse."
+      ]
+    },
+    {
+      "id": "coup",
+      "title": "The Night Muster",
+      "repeatable": false,
+      "sampleBody": "Board loyalists, with a handful of Wardens, have occupied the Command Center and declared the sealed contracts in force.",
+      "choices": [
+        "Call on the Wardens' loyalty.",
+        "Negotiate.",
+        "Publish the Ledger to the colony (needs 4 entries)."
+      ]
+    },
+    {
+      "id": "charter",
+      "title": "A Charter Draft",
+      "repeatable": false,
+      "sampleBody": "The Faculty's political scientists have drafted an Open Charter: common ownership of the colony's stores, public berth lotteries, and a seat for Free Berth.",
+      "choices": [
+        "Endorse the draft.",
+        "Shelve it."
+      ]
+    },
+    {
+      "id": "seedWarning",
+      "title": "Seed Equipment Failing",
+      "repeatable": false,
+      "sampleBody": "The crews report the seed units were never meant to run this long. Expect the seed power, smelter and factory to fail within ten turns. The seed command module will survive, but it will stop housing colonists.",
+      "choices": [
+        "Understood."
+      ]
+    }
+  ]
+}

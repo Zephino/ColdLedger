@@ -1,0 +1,1153 @@
+{
+  "fields": [
+    "Astronomy",
+    "Biology",
+    "Chemistry",
+    "Planetary Sciences",
+    "Mathematics",
+    "Computer Science",
+    "Physics",
+    "Social Sciences",
+    "Humanities"
+  ],
+  "spaceProgramKeys": [
+    "space:astrophysics",
+    "space:mining",
+    "space:orbital",
+    "space:propulsion",
+    "space:math",
+    "space:wind",
+    "space:testing"
+  ],
+  "topics": [
+    {
+      "id": "astrophysics",
+      "name": "Astrophysics",
+      "field": "Astronomy",
+      "cost": 40,
+      "desc": "Stellar processes. Required for a space program.",
+      "effects": [
+        "space:astrophysics"
+      ]
+    },
+    {
+      "id": "basicAstronomy",
+      "name": "Basic Astronomy",
+      "field": "Astronomy",
+      "cost": 20,
+      "desc": "Orbital survey basics. Improves storm warnings.",
+      "effects": [
+        "warning"
+      ]
+    },
+    {
+      "id": "planetaryAstronomy",
+      "name": "Planetary Astronomy",
+      "field": "Astronomy",
+      "cost": 30,
+      "desc": "Better geological readings from orbit.",
+      "effects": [
+        "explorer+"
+      ]
+    },
+    {
+      "id": "stellarAstronomy",
+      "name": "Stellar Astronomy",
+      "field": "Astronomy",
+      "cost": 30,
+      "desc": "Predicts flares on the hot face.",
+      "effects": [
+        "warning"
+      ]
+    },
+    {
+      "id": "medicine",
+      "name": "Medicine",
+      "field": "Biology",
+      "cost": 30,
+      "desc": "Extends colonist lifespan.",
+      "effects": [
+        "lifespan"
+      ]
+    },
+    {
+      "id": "pharmacology",
+      "name": "Pharmacology",
+      "field": "Biology",
+      "cost": 45,
+      "desc": "Cuts plague antidote work in half.",
+      "parent": "medicine",
+      "effects": [
+        "plague-half"
+      ]
+    },
+    {
+      "id": "alienPharmacology",
+      "name": "Alien Pharmacology",
+      "field": "Biology",
+      "cost": 70,
+      "desc": "Antidotes for native pathogens. Plague is cured on detection.",
+      "parent": "pharmacology",
+      "effects": [
+        "plague-cure"
+      ]
+    },
+    {
+      "id": "genetics",
+      "name": "Genetics",
+      "field": "Biology",
+      "cost": 50,
+      "desc": "Population health and birth rate.",
+      "parent": "medicine",
+      "effects": [
+        "births+"
+      ]
+    },
+    {
+      "id": "geneticEngineering",
+      "name": "Genetic Engineering",
+      "field": "Biology",
+      "cost": 80,
+      "desc": "Designer crops and organisms.",
+      "parent": "genetics",
+      "hot": true
+    },
+    {
+      "id": "agriculture2",
+      "name": "Agriculture 2",
+      "field": "Biology",
+      "cost": 60,
+      "desc": "Third-generation AgriDomes.",
+      "parent": "geneticEngineering",
+      "effects": [
+        "tier:agridome:3"
+      ]
+    },
+    {
+      "id": "exobiology",
+      "name": "Exobiology",
+      "field": "Biology",
+      "cost": 40,
+      "desc": "Native microbiology. Lowers plague chance.",
+      "effects": [
+        "plague-chance-"
+      ]
+    },
+    {
+      "id": "botany",
+      "name": "Plant Biology (Botany)",
+      "field": "Biology",
+      "cost": 25,
+      "desc": "Plant growth under artificial light."
+    },
+    {
+      "id": "agriculture1",
+      "name": "Agriculture 1",
+      "field": "Biology",
+      "cost": 40,
+      "desc": "Second-generation AgriDomes.",
+      "parent": "botany",
+      "effects": [
+        "tier:agridome:2"
+      ]
+    },
+    {
+      "id": "physiology",
+      "name": "Physiology",
+      "field": "Biology",
+      "cost": 30,
+      "desc": "Adaptation to local gravity.",
+      "effects": [
+        "deaths-"
+      ]
+    },
+    {
+      "id": "anatomy",
+      "name": "Anatomy",
+      "field": "Biology",
+      "cost": 30,
+      "desc": "Better trauma care.",
+      "parent": "physiology",
+      "effects": [
+        "deaths-"
+      ]
+    },
+    {
+      "id": "comparativePhysiology",
+      "name": "Comparative Physiology",
+      "field": "Biology",
+      "cost": 40,
+      "desc": "Long-term low-gravity health.",
+      "parent": "physiology",
+      "effects": [
+        "lifespan"
+      ]
+    },
+    {
+      "id": "embryology",
+      "name": "Embryology",
+      "field": "Biology",
+      "cost": 35,
+      "desc": "Safer births.",
+      "effects": [
+        "births+"
+      ]
+    },
+    {
+      "id": "immunology",
+      "name": "Immunology",
+      "field": "Biology",
+      "cost": 35,
+      "desc": "Lowers plague chance.",
+      "effects": [
+        "plague-chance-"
+      ]
+    },
+    {
+      "id": "entomology",
+      "name": "Entomology",
+      "field": "Biology",
+      "cost": 25,
+      "desc": "Pollinator management in domes.",
+      "effects": [
+        "food+"
+      ]
+    },
+    {
+      "id": "ecology",
+      "name": "Ecology",
+      "field": "Biology",
+      "cost": 30,
+      "desc": "Closed-loop habitat ecology."
+    },
+    {
+      "id": "alienEcology",
+      "name": "Alien Ecology",
+      "field": "Biology",
+      "cost": 45,
+      "desc": "Native biosphere surveys.",
+      "parent": "ecology"
+    },
+    {
+      "id": "atmosphericEcology",
+      "name": "Atmospheric Ecology",
+      "field": "Biology",
+      "cost": 70,
+      "desc": "Required for terraforming.",
+      "parent": "alienEcology",
+      "effects": [
+        "terraform:atmo"
+      ]
+    },
+    {
+      "id": "terrestrialEcology",
+      "name": "Terrestrial Ecology",
+      "field": "Biology",
+      "cost": 50,
+      "desc": "Soil engineering. Food yield up.",
+      "parent": "alienEcology",
+      "effects": [
+        "food+"
+      ]
+    },
+    {
+      "id": "marineEcology",
+      "name": "Marine Ecology",
+      "field": "Biology",
+      "cost": 50,
+      "desc": "Subsurface ice ecology.",
+      "parent": "alienEcology"
+    },
+    {
+      "id": "biochemistry",
+      "name": "Biochemistry",
+      "field": "Chemistry",
+      "cost": 30,
+      "desc": "Medicine production efficiency."
+    },
+    {
+      "id": "physicalChemistry",
+      "name": "Physical Chemistry",
+      "field": "Chemistry",
+      "cost": 30,
+      "desc": "Foundation for materials work."
+    },
+    {
+      "id": "metallurgy",
+      "name": "Metallurgy",
+      "field": "Chemistry",
+      "cost": 45,
+      "desc": "Mine yield up.",
+      "parent": "physicalChemistry",
+      "effects": [
+        "mine+"
+      ]
+    },
+    {
+      "id": "materialsProcessing",
+      "name": "Materials Processing",
+      "field": "Chemistry",
+      "cost": 60,
+      "desc": "Second-generation Smelters.",
+      "parent": "physicalChemistry",
+      "effects": [
+        "tier:smelter:2"
+      ]
+    },
+    {
+      "id": "quantumChemistry",
+      "name": "Quantum Chemistry",
+      "field": "Chemistry",
+      "cost": 70,
+      "desc": "Third-generation Laboratories.",
+      "effects": [
+        "tier:lab:3"
+      ]
+    },
+    {
+      "id": "meteorology",
+      "name": "Meteorology",
+      "field": "Planetary Sciences",
+      "cost": 30,
+      "desc": "Storm forecasts reduce damage.",
+      "effects": [
+        "warning"
+      ]
+    },
+    {
+      "id": "geography",
+      "name": "Geography",
+      "field": "Planetary Sciences",
+      "cost": 20,
+      "desc": "Survey mapping."
+    },
+    {
+      "id": "geology",
+      "name": "Geology",
+      "field": "Planetary Sciences",
+      "cost": 25,
+      "desc": "Foundation for mining science."
+    },
+    {
+      "id": "terrestrialGeology",
+      "name": "Terrestrial Geology",
+      "field": "Planetary Sciences",
+      "cost": 35,
+      "desc": "Rock mechanics.",
+      "parent": "geology"
+    },
+    {
+      "id": "tectonics",
+      "name": "Tectonics and Earthquakes",
+      "field": "Planetary Sciences",
+      "cost": 45,
+      "desc": "Quake damage reduced.",
+      "parent": "terrestrialGeology",
+      "effects": [
+        "quake-"
+      ]
+    },
+    {
+      "id": "mineralogy",
+      "name": "Mineralogy",
+      "field": "Planetary Sciences",
+      "cost": 40,
+      "desc": "Explorers find more deposits.",
+      "parent": "terrestrialGeology",
+      "effects": [
+        "explorer+"
+      ]
+    },
+    {
+      "id": "vulcanology",
+      "name": "Vulcanology",
+      "field": "Planetary Sciences",
+      "cost": 50,
+      "desc": "Geothermal plants on fumaroles.",
+      "parent": "terrestrialGeology",
+      "effects": [
+        "unlock:geothermal"
+      ]
+    },
+    {
+      "id": "mineralResources",
+      "name": "Mineral Resources",
+      "field": "Planetary Sciences",
+      "cost": 35,
+      "desc": "Deposit assessment.",
+      "parent": "geology"
+    },
+    {
+      "id": "terrestrialMining",
+      "name": "Terrestrial Mining",
+      "field": "Planetary Sciences",
+      "cost": 40,
+      "desc": "Mine yield up.",
+      "parent": "mineralResources",
+      "effects": [
+        "mine+"
+      ]
+    },
+    {
+      "id": "extraterrestrialMining",
+      "name": "Extraterrestrial Mining",
+      "field": "Planetary Sciences",
+      "cost": 60,
+      "desc": "Required for a space program.",
+      "parent": "mineralResources",
+      "effects": [
+        "space:mining",
+        "mine+"
+      ]
+    },
+    {
+      "id": "engineeringGeology",
+      "name": "Engineering Geology (Structural)",
+      "field": "Planetary Sciences",
+      "cost": 45,
+      "desc": "Faster underground digging.",
+      "parent": "geology",
+      "effects": [
+        "dig+"
+      ]
+    },
+    {
+      "id": "mathematics",
+      "name": "Mathematics",
+      "field": "Mathematics",
+      "cost": 30,
+      "desc": "Required for a space program; speeds all research slightly.",
+      "effects": [
+        "space:math",
+        "research+"
+      ]
+    },
+    {
+      "id": "ai",
+      "name": "Artificial Intelligence",
+      "field": "Computer Science",
+      "cost": 40,
+      "desc": "Machine reasoning."
+    },
+    {
+      "id": "aiManagers",
+      "name": "AI Managers",
+      "field": "Computer Science",
+      "cost": 60,
+      "desc": "AI personalities can run secondary colonies.",
+      "parent": "ai",
+      "effects": [
+        "ai-managers"
+      ]
+    },
+    {
+      "id": "aiPersonality",
+      "name": "AI Personality Problems",
+      "field": "Computer Science",
+      "cost": 50,
+      "desc": "Stabilizes AI managers.",
+      "parent": "aiManagers",
+      "effects": [
+        "ai-stable"
+      ]
+    },
+    {
+      "id": "nanotech1",
+      "name": "Nanotechnology 1",
+      "field": "Computer Science",
+      "cost": 90,
+      "desc": "Nanotechnology Facility.",
+      "parent": "ai",
+      "hot": true,
+      "effects": [
+        "unlock:nano"
+      ]
+    },
+    {
+      "id": "probeIntelligence",
+      "name": "Space Probe Intelligence",
+      "field": "Computer Science",
+      "cost": 40,
+      "desc": "Smarter satellites.",
+      "parent": "ai"
+    },
+    {
+      "id": "robotics1",
+      "name": "Robotics 1",
+      "field": "Computer Science",
+      "cost": 45,
+      "desc": "Second-generation Robot Command.",
+      "parent": "ai",
+      "effects": [
+        "tier:roboCommand:2"
+      ]
+    },
+    {
+      "id": "airbots",
+      "name": "Airbots",
+      "field": "Computer Science",
+      "cost": 40,
+      "desc": "Airborne robots are never lost in rough terrain.",
+      "parent": "robotics1",
+      "effects": [
+        "robot:airbot"
+      ]
+    },
+    {
+      "id": "repairbots",
+      "name": "Repairbots",
+      "field": "Computer Science",
+      "cost": 40,
+      "desc": "Robots that swap dead fuel cells.",
+      "parent": "robotics1",
+      "effects": [
+        "robot:repairbot"
+      ]
+    },
+    {
+      "id": "humanoidWorkers",
+      "name": "Humanoid Workers",
+      "field": "Computer Science",
+      "cost": 60,
+      "desc": "Robots that fill labor jobs.",
+      "parent": "robotics1",
+      "effects": [
+        "robot:humanoid"
+      ]
+    },
+    {
+      "id": "advancedProcessors",
+      "name": "Advanced Processors",
+      "field": "Computer Science",
+      "cost": 50,
+      "desc": "Second-generation Laboratories.",
+      "effects": [
+        "tier:lab:2"
+      ]
+    },
+    {
+      "id": "systemsAnalysis",
+      "name": "Systems Analysis",
+      "field": "Computer Science",
+      "cost": 35,
+      "desc": "Process auditing. Reveals Ledger discrepancies.",
+      "effects": [
+        "ledger"
+      ]
+    },
+    {
+      "id": "efficiency1",
+      "name": "Efficiency Studies 1",
+      "field": "Computer Science",
+      "cost": 45,
+      "desc": "Second-generation Factories.",
+      "parent": "systemsAnalysis",
+      "effects": [
+        "tier:factory:2"
+      ]
+    },
+    {
+      "id": "efficiency2",
+      "name": "Efficiency Studies 2",
+      "field": "Computer Science",
+      "cost": 70,
+      "desc": "Third-generation Factories.",
+      "parent": "efficiency1",
+      "effects": [
+        "tier:factory:3"
+      ]
+    },
+    {
+      "id": "aerospace",
+      "name": "Aerospace",
+      "field": "Physics",
+      "cost": 40,
+      "desc": "Flight engineering."
+    },
+    {
+      "id": "windTunnels",
+      "name": "Wind Tunnels",
+      "field": "Physics",
+      "cost": 40,
+      "desc": "Required for a space program.",
+      "parent": "aerospace",
+      "effects": [
+        "space:wind"
+      ]
+    },
+    {
+      "id": "spacecraftTesting",
+      "name": "Spacecraft Testing and Analysis",
+      "field": "Physics",
+      "cost": 60,
+      "desc": "Spaceport. Required for a space program.",
+      "parent": "aerospace",
+      "effects": [
+        "space:testing",
+        "unlock:spaceport"
+      ]
+    },
+    {
+      "id": "orbitalStations",
+      "name": "Orbital Space Stations",
+      "field": "Physics",
+      "cost": 70,
+      "desc": "Orbital assembly for the starship.",
+      "parent": "aerospace"
+    },
+    {
+      "id": "satellites",
+      "name": "Satellites and Probes",
+      "field": "Physics",
+      "cost": 45,
+      "desc": "Satellite manufacture.",
+      "parent": "aerospace"
+    },
+    {
+      "id": "meteorsat",
+      "name": "Meteorsat",
+      "field": "Physics",
+      "cost": 30,
+      "desc": "Meteor warnings.",
+      "parent": "satellites",
+      "effects": [
+        "sat:meteorsat"
+      ]
+    },
+    {
+      "id": "comsat",
+      "name": "Comsat",
+      "field": "Physics",
+      "cost": 30,
+      "desc": "Robots keep contact anywhere.",
+      "parent": "satellites",
+      "effects": [
+        "sat:comsat"
+      ]
+    },
+    {
+      "id": "solarSat",
+      "name": "Solar Power Satellite",
+      "field": "Physics",
+      "cost": 50,
+      "desc": "Orbital power.",
+      "parent": "satellites",
+      "effects": [
+        "sat:solarSat"
+      ]
+    },
+    {
+      "id": "geoProbe",
+      "name": "Geological Penetrator Probe",
+      "field": "Physics",
+      "cost": 30,
+      "desc": "Deep deposit survey.",
+      "parent": "satellites",
+      "effects": [
+        "sat:geoProbe"
+      ]
+    },
+    {
+      "id": "weathersat",
+      "name": "Weathersat",
+      "field": "Physics",
+      "cost": 30,
+      "desc": "Storm forecasts.",
+      "parent": "satellites",
+      "effects": [
+        "sat:weathersat"
+      ]
+    },
+    {
+      "id": "orbitalObserver",
+      "name": "Orbital Observer",
+      "field": "Physics",
+      "cost": 35,
+      "desc": "Watches the Free Berth colony.",
+      "parent": "satellites",
+      "effects": [
+        "sat:observer"
+      ]
+    },
+    {
+      "id": "flybyProbe",
+      "name": "Interstellar Flyby Probe",
+      "field": "Physics",
+      "cost": 50,
+      "desc": "Scout other systems.",
+      "parent": "satellites"
+    },
+    {
+      "id": "ulbiProbe",
+      "name": "ULBI Probe",
+      "field": "Physics",
+      "cost": 50,
+      "desc": "Long-baseline interferometry.",
+      "parent": "satellites"
+    },
+    {
+      "id": "communications",
+      "name": "Communications",
+      "field": "Physics",
+      "cost": 30,
+      "desc": "Longer robot range.",
+      "effects": [
+        "comm+"
+      ]
+    },
+    {
+      "id": "harshSignals",
+      "name": "Harsh Environment Signals Processing",
+      "field": "Physics",
+      "cost": 45,
+      "desc": "Signals survive terminator storms. Needed to broadcast the Ledger.",
+      "parent": "communications",
+      "effects": [
+        "comm+",
+        "broadcast"
+      ]
+    },
+    {
+      "id": "seti",
+      "name": "SETI",
+      "field": "Physics",
+      "cost": 60,
+      "desc": "Listens beyond the system.",
+      "parent": "communications",
+      "effects": [
+        "ledger"
+      ]
+    },
+    {
+      "id": "orbitalMechanics",
+      "name": "Orbital Mechanics",
+      "field": "Physics",
+      "cost": 50,
+      "desc": "Mass Driver. Required for a space program.",
+      "effects": [
+        "space:orbital",
+        "unlock:massDriver"
+      ]
+    },
+    {
+      "id": "electricalEngineering",
+      "name": "Electrical Engineering",
+      "field": "Physics",
+      "cost": 35,
+      "desc": "Power distribution."
+    },
+    {
+      "id": "robotics2",
+      "name": "Robotics 2",
+      "field": "Physics",
+      "cost": 60,
+      "desc": "Fuel cells last longer.",
+      "parent": "electricalEngineering",
+      "effects": [
+        "fuel+"
+      ]
+    },
+    {
+      "id": "optics",
+      "name": "Optics",
+      "field": "Physics",
+      "cost": 25,
+      "desc": "Better surveys."
+    },
+    {
+      "id": "powerGeneration",
+      "name": "Power Generation",
+      "field": "Physics",
+      "cost": 35,
+      "desc": "Plant efficiency."
+    },
+    {
+      "id": "altPower",
+      "name": "Advanced Alternative Systems",
+      "field": "Physics",
+      "cost": 50,
+      "desc": "Solar Power Receiver Arrays.",
+      "parent": "powerGeneration",
+      "effects": [
+        "unlock:solarReceiver"
+      ]
+    },
+    {
+      "id": "propulsion",
+      "name": "Propulsion Systems",
+      "field": "Physics",
+      "cost": 40,
+      "desc": "Rocketry."
+    },
+    {
+      "id": "standardPropulsion",
+      "name": "Standard Propulsion",
+      "field": "Physics",
+      "cost": 60,
+      "desc": "Required for a space program.",
+      "parent": "propulsion",
+      "effects": [
+        "space:propulsion"
+      ]
+    },
+    {
+      "id": "asteroidMiner",
+      "name": "Asteroid Miner",
+      "field": "Physics",
+      "cost": 70,
+      "desc": "Orbital mining runs.",
+      "parent": "propulsion"
+    },
+    {
+      "id": "heavyLifter",
+      "name": "Heavy Lifter",
+      "field": "Physics",
+      "cost": 70,
+      "desc": "Bigger launches.",
+      "parent": "propulsion"
+    },
+    {
+      "id": "lowOrbitFreighter",
+      "name": "Low Orbit Freighter",
+      "field": "Physics",
+      "cost": 60,
+      "desc": "Cheaper launches.",
+      "parent": "propulsion"
+    },
+    {
+      "id": "theoreticalPhysics",
+      "name": "Theoretical Physics",
+      "field": "Physics",
+      "cost": 40,
+      "desc": "Foundations."
+    },
+    {
+      "id": "antimatter",
+      "name": "Antimatter",
+      "field": "Physics",
+      "cost": 120,
+      "desc": "Dangerous fuel research.",
+      "parent": "theoreticalPhysics",
+      "hot": true
+    },
+    {
+      "id": "nuclearPhysics",
+      "name": "Nuclear Physics",
+      "field": "Physics",
+      "cost": 60,
+      "desc": "Reactor safety. Fewer Tokamak accidents.",
+      "parent": "theoreticalPhysics",
+      "hot": true,
+      "effects": [
+        "tokamak-safe"
+      ]
+    },
+    {
+      "id": "plasmaPhysics",
+      "name": "Plasma Physics",
+      "field": "Physics",
+      "cost": 70,
+      "desc": "Build new Tokamak reactors.",
+      "parent": "theoreticalPhysics",
+      "hot": true,
+      "effects": [
+        "unlock:tokamak"
+      ]
+    },
+    {
+      "id": "superconductivity",
+      "name": "Superconductivity",
+      "field": "Physics",
+      "cost": 60,
+      "desc": "Monorail power.",
+      "parent": "theoreticalPhysics"
+    },
+    {
+      "id": "quantumMechanics",
+      "name": "Quantum Mechanics",
+      "field": "Physics",
+      "cost": 70,
+      "desc": "Foundation for nanotechnology.",
+      "parent": "theoreticalPhysics"
+    },
+    {
+      "id": "nanotech2",
+      "name": "Nanotechnology 2",
+      "field": "Physics",
+      "cost": 90,
+      "desc": "Nanomachine design.",
+      "parent": "quantumMechanics",
+      "hot": true
+    },
+    {
+      "id": "nanomachines",
+      "name": "Nanomachines",
+      "field": "Physics",
+      "cost": 80,
+      "desc": "Working nanomachines.",
+      "parent": "nanotech2",
+      "hot": true
+    },
+    {
+      "id": "assembler",
+      "name": "Assembler",
+      "field": "Physics",
+      "cost": 80,
+      "desc": "Construction 25% faster.",
+      "parent": "nanomachines",
+      "effects": [
+        "build+"
+      ]
+    },
+    {
+      "id": "replicator",
+      "name": "Replicator",
+      "field": "Physics",
+      "cost": 100,
+      "desc": "Self-copying machines.",
+      "parent": "nanomachines",
+      "hot": true
+    },
+    {
+      "id": "repConstruction",
+      "name": "Replicator–Construction",
+      "field": "Physics",
+      "cost": 80,
+      "desc": "Construction 25% faster.",
+      "parent": "replicator",
+      "effects": [
+        "build+"
+      ]
+    },
+    {
+      "id": "repMedical",
+      "name": "Replicator–Medical",
+      "field": "Physics",
+      "cost": 80,
+      "desc": "Death rate down.",
+      "parent": "replicator",
+      "effects": [
+        "deaths-"
+      ]
+    },
+    {
+      "id": "repMining",
+      "name": "Replicator–Mining",
+      "field": "Physics",
+      "cost": 80,
+      "desc": "Mine yield up.",
+      "parent": "replicator",
+      "effects": [
+        "mine+"
+      ]
+    },
+    {
+      "id": "repTerraforming",
+      "name": "Replicator–Terraforming",
+      "field": "Physics",
+      "cost": 120,
+      "desc": "Terraforming Facility.",
+      "parent": "replicator",
+      "effects": [
+        "terraform:rep"
+      ]
+    },
+    {
+      "id": "repFood",
+      "name": "Replicator–Food Production",
+      "field": "Physics",
+      "cost": 80,
+      "desc": "Food yield up.",
+      "parent": "replicator",
+      "effects": [
+        "food+"
+      ]
+    },
+    {
+      "id": "economics",
+      "name": "Economics",
+      "field": "Social Sciences",
+      "cost": 35,
+      "desc": "Better trade rates. Reveals Ledger discrepancies.",
+      "effects": [
+        "trade+",
+        "ledger"
+      ]
+    },
+    {
+      "id": "politicalScience",
+      "name": "Political Science",
+      "field": "Social Sciences",
+      "cost": 40,
+      "desc": "Better trade rates. Needed to publish the Ledger.",
+      "effects": [
+        "trade+",
+        "charter"
+      ]
+    },
+    {
+      "id": "psychology",
+      "name": "Psychology",
+      "field": "Social Sciences",
+      "cost": 30,
+      "desc": "Morale insight.",
+      "effects": [
+        "morale+"
+      ]
+    },
+    {
+      "id": "tradeNegotiation",
+      "name": "Trade Negotiation",
+      "field": "Social Sciences",
+      "cost": 45,
+      "desc": "Better trade rates.",
+      "parent": "psychology",
+      "effects": [
+        "trade+"
+      ]
+    },
+    {
+      "id": "teaching",
+      "name": "Advanced Teaching Methods",
+      "field": "Social Sciences",
+      "cost": 40,
+      "desc": "Universities graduate scientists faster.",
+      "parent": "psychology",
+      "effects": [
+        "school+"
+      ]
+    },
+    {
+      "id": "sociology",
+      "name": "Sociology",
+      "field": "Social Sciences",
+      "cost": 30,
+      "desc": "Community studies."
+    },
+    {
+      "id": "crowdPsychology",
+      "name": "Crowd Psychology",
+      "field": "Social Sciences",
+      "cost": 40,
+      "desc": "Morale up.",
+      "parent": "sociology",
+      "effects": [
+        "morale+"
+      ]
+    },
+    {
+      "id": "industrialSociology",
+      "name": "Industrial Sociology",
+      "field": "Social Sciences",
+      "cost": 40,
+      "desc": "Fewer factory breakdowns.",
+      "parent": "sociology",
+      "effects": [
+        "breakdown-"
+      ]
+    },
+    {
+      "id": "socialStratification",
+      "name": "Social Stratification",
+      "field": "Social Sciences",
+      "cost": 40,
+      "desc": "Reveals Ledger discrepancies.",
+      "parent": "sociology",
+      "effects": [
+        "ledger"
+      ]
+    },
+    {
+      "id": "culturalChange",
+      "name": "Cultural Change",
+      "field": "Social Sciences",
+      "cost": 50,
+      "desc": "Third-generation Residences.",
+      "parent": "sociology",
+      "effects": [
+        "tier:residence:3"
+      ]
+    },
+    {
+      "id": "urbanStudies",
+      "name": "Urban Studies",
+      "field": "Social Sciences",
+      "cost": 35,
+      "desc": "Second-generation Residences.",
+      "effects": [
+        "tier:residence:2"
+      ]
+    },
+    {
+      "id": "cityPlanning",
+      "name": "City Planning",
+      "field": "Social Sciences",
+      "cost": 50,
+      "desc": "Monorail system.",
+      "parent": "urbanStudies",
+      "effects": [
+        "unlock:monorail"
+      ]
+    },
+    {
+      "id": "policeScience",
+      "name": "Police Science",
+      "field": "Social Sciences",
+      "cost": 35,
+      "desc": "Police reduce crime more.",
+      "effects": [
+        "police+"
+      ]
+    },
+    {
+      "id": "drama",
+      "name": "Drama",
+      "field": "Humanities",
+      "cost": 25,
+      "desc": "Morale up.",
+      "effects": [
+        "morale+"
+      ]
+    },
+    {
+      "id": "fineArts",
+      "name": "Fine Arts",
+      "field": "Humanities",
+      "cost": 25,
+      "desc": "Morale up.",
+      "effects": [
+        "morale+"
+      ]
+    },
+    {
+      "id": "history",
+      "name": "History",
+      "field": "Humanities",
+      "cost": 25,
+      "desc": "The colony remembers. Reveals Ledger discrepancies.",
+      "effects": [
+        "ledger"
+      ]
+    },
+    {
+      "id": "music",
+      "name": "Music",
+      "field": "Humanities",
+      "cost": 25,
+      "desc": "Morale up.",
+      "effects": [
+        "morale+"
+      ]
+    },
+    {
+      "id": "philosophy",
+      "name": "Philosophy",
+      "field": "Humanities",
+      "cost": 25,
+      "desc": "Morale up.",
+      "effects": [
+        "morale+"
+      ]
+    }
+  ]
+}

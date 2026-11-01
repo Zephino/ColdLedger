@@ -1,0 +1,62 @@
+{
+  "processed": [
+    "MetalA",
+    "MetalB",
+    "MetalC",
+    "MetalD",
+    "PrecA",
+    "PrecB",
+    "MinA",
+    "MinB",
+    "MinC",
+    "FusionA",
+    "FusionB",
+    "FusionC"
+  ],
+  "ores": [
+    "OreA",
+    "OreB",
+    "OreC",
+    "OreD",
+    "OreMinA",
+    "OreMinB",
+    "OreMinC",
+    "OreFusionA",
+    "OreFusionB",
+    "OreFusionC"
+  ],
+  "groups": [
+    {
+      "label": "Metals",
+      "members": [
+        "MetalA",
+        "MetalB",
+        "MetalC",
+        "MetalD"
+      ]
+    },
+    {
+      "label": "Precious",
+      "members": [
+        "PrecA",
+        "PrecB"
+      ]
+    },
+    {
+      "label": "Minerals",
+      "members": [
+        "MinA",
+        "MinB",
+        "MinC"
+      ]
+    },
+    {
+      "label": "Fusion",
+      "members": [
+        "FusionA",
+        "FusionB",
+        "FusionC"
+      ]
+    }
+  ]
+}
