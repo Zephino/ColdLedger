@@ -1,5 +1,35 @@
 # Changelog
 
+## Version 00.01.07
+Date: 11/01/2026
+Time: 1:16 AM
+
+### Changes
+- `play.bat` and `play.sh` now start Vite on a fixed port (`127.0.0.1:5173`) with `--open`, so the browser opens only after the game server is ready.
+
+### Reason
+Browser showed a black non-game page at localhost:5173 while trying to play on Windows.
+
+## Version 00.01.06
+Date: 11/01/2026
+Time: 1:10 AM
+
+### Changes
+- Added `play.bat` for Windows: double-click to install dependencies if needed and launch in the browser, or pass `desktop` / `portable`.
+
+### Reason
+Playing on Windows; bash is not the right launcher there.
+
+## Version 00.01.05
+Date: 11/01/2026
+Time: 1:03 AM
+
+### Changes
+- Added `play.sh`, a one-command launcher that installs dependencies if needed and starts the game in the browser, as a desktop window, or as a portable Windows build.
+
+### Reason
+Requested a bash script that launches the game on this PC.
+
 ## Version 00.01.04
 Date: 11/01/2026
 Time: 1:38 AM
