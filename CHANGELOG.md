@@ -1,5 +1,16 @@
 # Changelog
 
+## Version 00.01.08
+Date: 11/01/2026
+Time: 8:20 AM
+
+### Changes
+- Modernized all procedural map art toward a futuristic look: glass roofs, cyan/violet energy accents, glowing conduits, holographic rings, and sleeker hover robots.
+- Cooler night sky and brighter status/build feedback on the isometric view.
+
+### Reason
+Requested modernized, futuristic sprites instead of pulling copyrighted art from the earlier game.
+
 ## Version 00.01.07
 Date: 11/01/2026
 Time: 1:16 AM

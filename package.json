@@ -1,6 +1,6 @@
 {
   "name": "cold-ledger",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "private": true,
   "description": "Cold Ledger: a turn-based colony survival game.",
   "type": "module",

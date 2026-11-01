@@ -155,12 +155,12 @@ export class IsoView {
     const hgt = this.canvas.height / this.dpr;
     const sky = c.createLinearGradient(0, 0, w, hgt);
     if (this.level === 0) {
-      sky.addColorStop(0, "#1b130f");
-      sky.addColorStop(0.5, "#0d0f14");
-      sky.addColorStop(1, "#070a12");
+      sky.addColorStop(0, "#0a1628");
+      sky.addColorStop(0.45, "#071018");
+      sky.addColorStop(1, "#04060c");
     } else {
-      sky.addColorStop(0, "#07080a");
-      sky.addColorStop(1, "#050506");
+      sky.addColorStop(0, "#06080f");
+      sky.addColorStop(1, "#03040a");
     }
     c.fillStyle = sky;
     c.fillRect(0, 0, w, hgt);
@@ -269,18 +269,37 @@ export class IsoView {
     c.stroke();
   }
 
+  private accent(color: string): string {
+    // Pull building colors toward cool cyan/violet for a futuristic read.
+    return mix(color, "#5ee7ff", 0.28);
+  }
+
+  private glowRing(sx: number, sy: number, z: number, rx: number, ry: number, rgba: string, width = 1.5) {
+    const c = this.ctx;
+    c.save();
+    c.shadowColor = rgba;
+    c.shadowBlur = 8 * z;
+    c.strokeStyle = rgba;
+    c.lineWidth = width * z;
+    c.beginPath();
+    c.ellipse(sx, sy, rx * z, ry * z, 0, 0, Math.PI * 2);
+    c.stroke();
+    c.restore();
+  }
+
   private box(sx: number, sy: number, z: number, scale: number, height: number, color: string) {
     const c = this.ctx;
     const hw = (TW / 2) * z * scale;
     const hh = (TH / 2) * z * scale;
     const top = sy - height * z;
+    const body = mix(color, "#1a2433", 0.35);
     c.beginPath();
     c.moveTo(sx - hw, sy);
     c.lineTo(sx, sy + hh);
     c.lineTo(sx, top + hh);
     c.lineTo(sx - hw, top);
     c.closePath();
-    c.fillStyle = shade(color, 0.62);
+    c.fillStyle = shade(body, 0.55);
     c.fill();
     c.beginPath();
     c.moveTo(sx + hw, sy);
@@ -288,7 +307,7 @@ export class IsoView {
     c.lineTo(sx, top + hh);
     c.lineTo(sx + hw, top);
     c.closePath();
-    c.fillStyle = shade(color, 0.8);
+    c.fillStyle = shade(body, 0.72);
     c.fill();
     c.beginPath();
     c.moveTo(sx, top - hh);
@@ -296,32 +315,128 @@ export class IsoView {
     c.lineTo(sx, top + hh);
     c.lineTo(sx - hw, top);
     c.closePath();
-    c.fillStyle = color;
+    const roof = c.createLinearGradient(sx - hw, top - hh, sx + hw, top + hh);
+    roof.addColorStop(0, shade(this.accent(color), 1.15));
+    roof.addColorStop(0.45, mix(color, "#d7f7ff", 0.25));
+    roof.addColorStop(1, shade(body, 0.9));
+    c.fillStyle = roof;
     c.fill();
+    c.strokeStyle = "rgba(120,220,255,0.28)";
+    c.lineWidth = Math.max(0.6, 0.9 * z);
+    c.stroke();
     return top;
   }
 
-  private dome(sx: number, sy: number, z: number, scale: number, height: number, color: string) {
+  private ledStrip(sx: number, syTop: number, z: number, active: boolean, time: number, rows = 2) {
+    if (z < 0.5) return;
+    const c = this.ctx;
+    const pulse = active ? 0.55 + 0.35 * Math.sin(time * 3) : 0.2;
+    for (let r = 0; r < rows; r++) {
+      const wy = syTop + 7 * z + r * 5 * z;
+      c.fillStyle = `rgba(80,230,255,${pulse})`;
+      c.fillRect(sx - 10 * z, wy, 20 * z, 1.6 * z);
+      c.fillStyle = `rgba(180,120,255,${pulse * 0.55})`;
+      c.fillRect(sx - 6 * z, wy + 2.2 * z, 12 * z, 1.1 * z);
+    }
+  }
+
+  private vent(sx: number, sy: number, z: number, color: string, active: boolean, time: number) {
+    const c = this.ctx;
+    this.box(sx, sy, z, 0.2, 20, mix(color, "#2a3548", 0.4));
+    this.glowRing(sx, sy - 22 * z, z, 4, 2, active ? `rgba(90,240,255,${0.45 + 0.3 * Math.sin(time * 4)})` : "rgba(90,140,180,0.25)", 2);
+    if (active) {
+      c.fillStyle = `rgba(140,250,255,${0.2 + 0.15 * Math.sin(time * 5)})`;
+      c.beginPath();
+      c.ellipse(sx, sy - 28 * z, 3.5 * z, 6 * z, 0, 0, Math.PI * 2);
+      c.fill();
+    }
+  }
+
+  private tank(sx: number, sy: number, z: number, color: string, tall = false, active = false, time = 0) {
+    const c = this.ctx;
+    const h = tall ? 18 : 12;
+    const top = this.box(sx, sy, z, 0.55, h, mix(color, "#3a4b63", 0.35));
+    c.beginPath();
+    c.ellipse(sx, top, 14 * z, 7 * z, 0, 0, Math.PI * 2);
+    c.fillStyle = mix(color, "#9fdfff", 0.35);
+    c.fill();
+    this.glowRing(sx, top + 5 * z, z, 11, 5, active ? `rgba(90,230,255,${0.4 + 0.25 * Math.sin(time * 2)})` : "rgba(90,160,200,0.25)");
+    this.glowRing(sx, top + 10 * z, z, 11, 5, "rgba(160,120,255,0.22)");
+  }
+
+  private dish(sx: number, sy: number, z: number, color: string, time: number) {
+    const c = this.ctx;
+    this.box(sx, sy, z, 0.32, 7, "#2c3648");
+    const ang = Math.sin(time * 0.8) * 0.2;
+    c.save();
+    c.translate(sx, sy - 14 * z);
+    c.rotate(ang);
+    c.beginPath();
+    c.ellipse(0, 0, 15 * z, 7.5 * z, 0, 0, Math.PI * 2);
+    c.fillStyle = mix(color, "#1b2a3d", 0.4);
+    c.fill();
+    c.strokeStyle = "rgba(120,235,255,0.85)";
+    c.lineWidth = 1.4 * z;
+    c.stroke();
+    c.strokeStyle = `rgba(180,120,255,${0.35 + 0.25 * Math.sin(time * 3)})`;
+    c.beginPath();
+    c.ellipse(0, 0, 8 * z, 4 * z, 0, 0, Math.PI * 2);
+    c.stroke();
+    c.fillStyle = "rgba(180,250,255,0.9)";
+    c.fillRect(-1 * z, 0, 2 * z, 9 * z);
+    c.restore();
+  }
+
+  private crane(sx: number, sy: number, z: number, color: string, time: number) {
+    const c = this.ctx;
+    this.box(sx, sy, z, 0.55, 8, mix(color, "#243044", 0.3));
+    const swing = Math.sin(time * 1.1) * 7 * z;
+    c.strokeStyle = "rgba(140,230,255,0.9)";
+    c.lineWidth = 2 * z;
+    c.beginPath();
+    c.moveTo(sx, sy - 8 * z);
+    c.lineTo(sx + swing, sy - 26 * z);
+    c.lineTo(sx + swing + 12 * z, sy - 21 * z);
+    c.stroke();
+    c.fillStyle = `rgba(255,120,220,${0.55 + 0.35 * Math.sin(time * 4)})`;
+    c.beginPath();
+    c.arc(sx + swing + 12 * z, sy - 21 * z, 2.2 * z, 0, Math.PI * 2);
+    c.fill();
+  }
+
+  private dome(sx: number, sy: number, z: number, scale: number, height: number, color: string, time = 0) {
     const c = this.ctx;
     const hw = (TW / 2) * z * scale;
     const hh = (TH / 2) * z * scale;
-    this.box(sx, sy, z, scale, 4, "#7c838a");
+    this.box(sx, sy, z, scale * 0.9, 4, "#1e2a3a");
     const base = sy - 4 * z;
+    this.glowRing(sx, base + 1 * z, z, (hw * 0.95) / z, (hh * 0.95) / z, `rgba(90,230,255,${0.25 + 0.15 * Math.sin(time * 2)})`, 1.2);
+    const g = c.createRadialGradient(sx - hw * 0.2, base - height * z * 0.75, 1, sx, base - height * z * 0.15, hw);
+    g.addColorStop(0, "rgba(210,250,255,0.85)");
+    g.addColorStop(0.35, mix(color, "#5ee7ff", 0.45));
+    g.addColorStop(0.75, mix(color, "#7a5cff", 0.25));
+    g.addColorStop(1, "rgba(20,30,50,0.35)");
     c.beginPath();
-    c.ellipse(sx, base, hw * 0.92, hh * 0.92, 0, 0, Math.PI * 2);
-    c.fillStyle = shade(color, 0.7);
-    c.fill();
-    const g = c.createRadialGradient(sx - hw * 0.3, base - height * z * 0.8, 2, sx, base - height * z * 0.3, hw);
-    g.addColorStop(0, "rgba(255,255,255,0.75)");
-    g.addColorStop(0.3, color);
-    g.addColorStop(1, shade(color, 0.55));
-    c.beginPath();
-    c.ellipse(sx, base, hw * 0.92, height * z, 0, Math.PI, Math.PI * 2);
-    c.ellipse(sx, base, hw * 0.92, hh * 0.92, 0, 0, Math.PI);
+    c.ellipse(sx, base, hw * 0.88, height * z, 0, Math.PI, Math.PI * 2);
+    c.ellipse(sx, base, hw * 0.88, hh * 0.82, 0, 0, Math.PI);
     c.fillStyle = g;
-    c.globalAlpha = 0.92;
+    c.globalAlpha = 0.88;
     c.fill();
     c.globalAlpha = 1;
+    c.strokeStyle = "rgba(180,250,255,0.55)";
+    c.lineWidth = 1.2 * z;
+    c.beginPath();
+    c.ellipse(sx, base - height * z * 0.4, hw * 0.5, height * z * 0.32, 0, Math.PI * 1.1, Math.PI * 1.9);
+    c.stroke();
+    // Geo panel ribs
+    c.strokeStyle = "rgba(120,200,255,0.25)";
+    c.lineWidth = 0.8 * z;
+    for (const t of [-0.45, 0, 0.45]) {
+      c.beginPath();
+      c.moveTo(sx + t * hw, base);
+      c.quadraticCurveTo(sx + t * hw * 0.4, base - height * z, sx, base - height * z);
+      c.stroke();
+    }
   }
 
   private connectorsFor(st: Structure): Array<[number, number]> {
@@ -343,22 +458,37 @@ export class IsoView {
     const c = this.ctx;
     const def = BUILDINGS[st.type];
     let color = def.color;
+    const active = st.state === "active";
     if (st.state === "destroyed") {
-      this.box(sx, sy, z, 0.7, 3, "#3a3533");
-      c.fillStyle = "rgba(20,20,20,0.6)";
-      c.fillRect(sx - 8 * z, sy - 6 * z, 16 * z, 4 * z);
+      this.box(sx, sy, z, 0.65, 3, "#2a2e36");
+      c.fillStyle = "rgba(255,70,90,0.35)";
+      c.fillRect(sx - 9 * z, sy - 8 * z, 18 * z, 3 * z);
       return;
     }
-    if (st.state === "exhausted") color = "#5a5552";
-    if (st.connected === false && def.needsTube) color = mix(color, "#555555", 0.6);
+    if (st.state === "exhausted") color = mix(color, "#4a5566", 0.7);
+    if (st.connected === false && def.needsTube) color = mix(color, "#3a4455", 0.55);
 
     if (LOW.has(st.type)) {
       const conns = this.connectorsFor(st);
-      const width = st.type === "road" ? 9 : st.type === "monorail" ? 4 : 6;
-      const col = st.type === "road" ? "#3b3733" : st.type === "monorail" ? "#a7adb8" : st.state === "building" ? "#7a7f86" : "#9aa3ad";
+      const isRoad = st.type === "road";
+      const isMono = st.type === "monorail";
+      const width = isRoad ? 8 : isMono ? 3.5 : 5.5;
+      const pulse = 0.45 + 0.25 * Math.sin(time * 2 + st.x * 0.2);
       c.lineCap = "round";
-      c.strokeStyle = col;
-      c.lineWidth = width * z;
+      if (isRoad) {
+        c.strokeStyle = "#2a3140";
+        c.lineWidth = width * z;
+      } else if (isMono) {
+        c.strokeStyle = `rgba(180,210,255,${0.75 + pulse * 0.2})`;
+        c.lineWidth = width * z;
+        c.shadowColor = "rgba(120,200,255,0.55)";
+        c.shadowBlur = 6 * z;
+      } else {
+        c.strokeStyle = st.state === "building" ? "rgba(90,140,170,0.7)" : `rgba(90,230,255,${0.55 + pulse * 0.35})`;
+        c.lineWidth = width * z;
+        c.shadowColor = "rgba(80,220,255,0.45)";
+        c.shadowBlur = 5 * z;
+      }
       for (const [dx, dy] of conns) {
         const ex = sx + ((dx - dy) * TW * z) / 4;
         const ey = sy + ((dx + dy) * TH * z) / 4;
@@ -367,139 +497,154 @@ export class IsoView {
         c.lineTo(ex, ey - 2 * z);
         c.stroke();
       }
+      c.shadowBlur = 0;
       if (st.type === "airShaft" || st.type === "ugShaft") {
         c.beginPath();
         c.ellipse(sx, sy - 3 * z, 12 * z, 6 * z, 0, 0, Math.PI * 2);
-        c.fillStyle = "#5a636c";
+        c.fillStyle = "#1c2736";
         c.fill();
+        this.glowRing(sx, sy - 5 * z, z, 8, 4, `rgba(90,240,255,${0.35 + 0.25 * Math.sin(time * 3)})`, 2);
         c.beginPath();
-        c.ellipse(sx, sy - 5 * z, 8 * z, 4 * z, 0, 0, Math.PI * 2);
-        c.fillStyle = "#1c2024";
+        c.ellipse(sx, sy - 5 * z, 6 * z, 3 * z, 0, 0, Math.PI * 2);
+        c.fillStyle = "#05080e";
         c.fill();
       } else if (!conns.length || st.type === "tube" || st.type === "ugTube") {
-        c.beginPath();
-        c.ellipse(sx, sy - 2 * z, 5 * z, 2.5 * z, 0, 0, Math.PI * 2);
-        c.fillStyle = col;
-        c.fill();
+        this.glowRing(sx, sy - 2 * z, z, 5, 2.5, `rgba(90,230,255,${0.4 + pulse * 0.3})`, 2);
       }
       return;
     }
 
     if (st.state === "building") {
       const p = 1 - st.buildLeft / Math.max(1, st.buildTotal);
-      const top = this.box(sx, sy, z, 0.8, 4 + 16 * p, mix(color, "#6b6f75", 0.6));
-      c.strokeStyle = "rgba(255,210,90,0.8)";
+      const top = this.box(sx, sy, z, 0.78, 4 + 16 * p, mix(color, "#2a3648", 0.45));
+      c.strokeStyle = `rgba(90,230,255,${0.45 + 0.35 * Math.sin(time * 4)})`;
       c.setLineDash([3 * z, 3 * z]);
-      c.lineWidth = 1;
-      c.strokeRect(sx - 14 * z, top - 12 * z, 28 * z, 22 * z);
+      c.lineWidth = 1.2 * z;
+      c.strokeRect(sx - 14 * z, top - 10 * z, 28 * z, 20 * z);
       c.setLineDash([]);
+      this.glowRing(sx, sy + 2 * z, z, 16, 8, "rgba(120,180,255,0.2)", 1);
       return;
     }
 
     const height = st.type === "commTower" ? 0 : def.category === "seed" ? 18 : st.type === "residence" ? 16 + st.tier * 4 : 14;
-    if (DOMES.has(st.type)) this.dome(sx, sy, z, 0.85, 20, color);
+    if (DOMES.has(st.type)) this.dome(sx, sy, z, 0.85, 20, color, time);
     else if (st.type === "commTower") {
-      this.box(sx, sy, z, 0.4, 6, "#8a8f96");
-      c.strokeStyle = "#c9ccd2";
+      this.box(sx, sy, z, 0.35, 6, "#2a3648");
+      c.strokeStyle = "rgba(160,220,255,0.9)";
       c.lineWidth = 2 * z;
       c.beginPath();
       c.moveTo(sx, sy - 6 * z);
       c.lineTo(sx, sy - 44 * z);
       c.stroke();
-      c.fillStyle = `rgba(255,80,60,${0.5 + 0.5 * Math.sin(time * 5)})`;
+      this.glowRing(sx, sy - 28 * z, z, 6, 3, `rgba(180,120,255,${0.35 + 0.3 * Math.sin(time * 3)})`);
+      c.fillStyle = `rgba(255,90,140,${0.55 + 0.4 * Math.sin(time * 5)})`;
       c.beginPath();
-      c.arc(sx, sy - 45 * z, 2.5 * z, 0, Math.PI * 2);
+      c.arc(sx, sy - 45 * z, 2.8 * z, 0, Math.PI * 2);
       c.fill();
     } else if (st.type === "mine") {
-      this.box(sx, sy, z, 0.6, 6, "#5c4a3c");
-      c.strokeStyle = "#b08a5a";
-      c.lineWidth = 2 * z;
-      c.beginPath();
-      c.moveTo(sx - 10 * z, sy - 4 * z);
-      c.lineTo(sx, sy - 30 * z);
-      c.lineTo(sx + 10 * z, sy - 4 * z);
-      c.moveTo(sx - 6 * z, sy - 14 * z);
-      c.lineTo(sx + 6 * z, sy - 14 * z);
-      c.stroke();
-      if (st.state === "active") {
-        c.fillStyle = `rgba(255,180,90,${0.4 + 0.4 * Math.sin(time * 6 + st.id)})`;
-        c.fillRect(sx - 2 * z, sy - 32 * z, 4 * z, 4 * z);
-      }
+      this.box(sx, sy, z, 0.58, 7, mix(color, "#243044", 0.25));
+      this.crane(sx, sy, z, color, time);
+      if (active) this.glowRing(sx, sy - 30 * z, z, 4, 2, `rgba(255,180,90,${0.4 + 0.35 * Math.sin(time * 5 + st.id)})`, 2);
     } else if (st.type === "tokamak" || st.type === "shipTokamak") {
-      this.box(sx, sy, z, 0.85, 8, "#6c6a60");
-      c.lineWidth = 6 * z;
-      c.strokeStyle = st.state === "active" ? `rgba(255,${200 + 40 * Math.sin(time * 3)},120,0.95)` : "#77705a";
+      this.box(sx, sy, z, 0.8, 8, "#2a3140");
+      const pulse = active ? 0.55 + 0.4 * Math.sin(time * 3) : 0.2;
+      this.glowRing(sx, sy - 16 * z, z, 16, 8, `rgba(255,200,120,${pulse})`, 4);
+      this.glowRing(sx, sy - 16 * z, z, 10, 5, `rgba(120,220,255,${pulse * 0.8})`, 2);
+      c.fillStyle = `rgba(255,240,180,${pulse})`;
       c.beginPath();
-      c.ellipse(sx, sy - 16 * z, 16 * z, 8 * z, 0, 0, Math.PI * 2);
-      c.stroke();
+      c.ellipse(sx, sy - 16 * z, 4 * z, 2 * z, 0, 0, Math.PI * 2);
+      c.fill();
     } else if (st.type === "colonistLander" || st.type === "cargoLander" || st.type === "seedLander") {
-      c.fillStyle = st.type === "seedLander" ? "#cfd6de" : "#e2e4ea";
+      const tall = st.type === "seedLander" ? 38 : 28;
       c.beginPath();
-      c.moveTo(sx - 16 * z, sy);
-      c.lineTo(sx, sy - (st.type === "seedLander" ? 40 : 30) * z);
-      c.lineTo(sx + 16 * z, sy);
+      c.moveTo(sx - 14 * z, sy);
+      c.lineTo(sx - 8 * z, sy - tall * 0.35 * z);
+      c.lineTo(sx, sy - tall * z);
+      c.lineTo(sx + 8 * z, sy - tall * 0.35 * z);
+      c.lineTo(sx + 14 * z, sy);
       c.closePath();
+      const hull = c.createLinearGradient(sx - 14 * z, sy, sx + 14 * z, sy - tall * z);
+      hull.addColorStop(0, "#1a2433");
+      hull.addColorStop(0.45, mix(color, "#9fdfff", 0.35));
+      hull.addColorStop(1, "#e8f7ff");
+      c.fillStyle = hull;
       c.fill();
-      c.fillStyle = "rgba(0,0,0,0.25)";
-      c.beginPath();
-      c.moveTo(sx, sy - (st.type === "seedLander" ? 40 : 30) * z);
-      c.lineTo(sx + 16 * z, sy);
-      c.lineTo(sx, sy + 4 * z);
-      c.closePath();
-      c.fill();
-      c.strokeStyle = "#9aa3ad";
+      c.strokeStyle = "rgba(120,230,255,0.7)";
+      c.lineWidth = 1.2 * z;
+      c.stroke();
+      this.glowRing(sx, sy - tall * 0.55 * z, z, 6, 3, `rgba(90,230,255,${0.35 + 0.25 * Math.sin(time * 2)})`);
+      c.strokeStyle = "rgba(180,200,220,0.7)";
       c.lineWidth = 2 * z;
       c.beginPath();
-      c.moveTo(sx - 14 * z, sy + 1 * z);
-      c.lineTo(sx - 20 * z, sy + 6 * z);
-      c.moveTo(sx + 14 * z, sy + 1 * z);
-      c.lineTo(sx + 20 * z, sy + 6 * z);
+      c.moveTo(sx - 12 * z, sy);
+      c.lineTo(sx - 18 * z, sy + 5 * z);
+      c.moveTo(sx + 12 * z, sy);
+      c.lineTo(sx + 18 * z, sy + 5 * z);
       c.stroke();
     } else if (st.type === "solarReceiver") {
-      this.box(sx, sy, z, 0.7, 4, "#555");
-      c.fillStyle = "#3d5a8a";
+      this.box(sx, sy, z, 0.65, 4, "#1e2a3a");
       c.beginPath();
-      c.moveTo(sx - 18 * z, sy - 10 * z);
-      c.lineTo(sx, sy - 22 * z);
-      c.lineTo(sx + 18 * z, sy - 10 * z);
-      c.lineTo(sx, sy + 2 * z);
+      c.moveTo(sx - 18 * z, sy - 8 * z);
+      c.lineTo(sx, sy - 24 * z);
+      c.lineTo(sx + 18 * z, sy - 8 * z);
+      c.lineTo(sx, sy + 1 * z);
       c.closePath();
+      const panel = c.createLinearGradient(sx, sy - 24 * z, sx, sy);
+      panel.addColorStop(0, "#7ad7ff");
+      panel.addColorStop(0.5, "#3a6cff");
+      panel.addColorStop(1, "#1a2040");
+      c.fillStyle = panel;
       c.fill();
-      c.strokeStyle = "#e0b040";
+      c.strokeStyle = `rgba(255,220,120,${0.5 + 0.35 * Math.sin(time * 2)})`;
+      c.lineWidth = 1.4 * z;
       c.stroke();
+    } else if (st.type === "storage") {
+      this.tank(sx, sy, z, color, true, active, time);
+    } else if (st.type === "smelter" || st.type === "seedSmelter" || st.type === "factory" || st.type === "seedFactory" || st.type === "lightIndustry") {
+      const top = this.box(sx, sy, z, 0.82, height, color);
+      this.ledStrip(sx, top, z, active, time, 3);
+      this.vent(sx + 10 * z, sy, z, color, active, time);
+    } else if (st.type === "seedPower" || st.type === "geothermal") {
+      const top = this.box(sx, sy, z, 0.75, height, color);
+      this.glowRing(sx, top + 8 * z, z, 10, 5, active ? `rgba(255,200,100,${0.4 + 0.3 * Math.sin(time * 3)})` : "rgba(180,140,80,0.25)", 2);
+      this.ledStrip(sx, top, z, active, time, 2);
+    } else if (st.type === "warehouse" || st.type === "monoStation" || st.type === "monoTransformer") {
+      const top = this.box(sx, sy, z, 0.8, height - 2, color);
+      this.ledStrip(sx, top, z, active || st.type.startsWith("mono"), time, 2);
+      if (st.type !== "warehouse") this.dish(sx, sy, z, color, time);
+    } else if (st.type === "spaceport" || st.type === "massDriver") {
+      const top = this.box(sx, sy, z, 0.82, height, color);
+      this.ledStrip(sx, top, z, active, time, 2);
+      c.strokeStyle = `rgba(180,240,255,${0.55 + 0.3 * Math.sin(time * 2)})`;
+      c.lineWidth = 2 * z;
+      c.beginPath();
+      c.moveTo(sx, top);
+      c.lineTo(sx + 8 * z, top - 26 * z);
+      c.stroke();
+      this.glowRing(sx + 8 * z, top - 26 * z, z, 3, 1.5, "rgba(255,140,220,0.55)", 2);
+    } else if (st.type === "residence" || st.type === "command" || st.type === "seedCommand" || st.type === "admin" || st.type === "university" || st.type === "lab" || st.type === "hotLab" || st.type === "medical" || st.type === "commercial" || st.type === "police" || st.type === "ugPolice" || st.type === "roboCommand") {
+      const top = this.box(sx, sy, z, 0.82, height, color);
+      this.ledStrip(sx, top, z, active || def.category === "seed" || st.type === "residence", time, st.type === "residence" ? 1 + st.tier : 2);
+      if (st.type === "roboCommand" || st.type === "hotLab") this.dish(sx - 2 * z, sy, z, color, time);
     } else {
-      const top = this.box(sx, sy, z, st.type === "storage" ? 0.7 : 0.82, height, color);
-      if (st.state === "active" && z > 0.6) {
-        c.fillStyle = `rgba(255,230,160,${0.55 + 0.25 * Math.sin(time * 2 + st.id)})`;
-        for (let i = 0; i < 3; i++) c.fillRect(sx + (4 + i * 6) * z, top + (8 + i * 2) * z, 3 * z, 3 * z);
-      }
-      if (st.type === "storage") {
-        c.beginPath();
-        c.ellipse(sx, top, 12 * z, 6 * z, 0, 0, Math.PI * 2);
-        c.fillStyle = shade(color, 1.1);
-        c.fill();
-      }
-      if (st.type === "spaceport" || st.type === "massDriver") {
-        c.strokeStyle = "#e8eef4";
-        c.lineWidth = 2 * z;
-        c.beginPath();
-        c.moveTo(sx, top);
-        c.lineTo(sx + 10 * z, top - 24 * z);
-        c.stroke();
+      const top = this.box(sx, sy, z, 0.82, height, color);
+      this.ledStrip(sx, top, z, active, time, 2);
+      if (st.type === "nano" || st.type === "trade" || st.type === "dirt" || st.type === "spew") {
+        this.glowRing(sx, top + 6 * z, z, 9, 4.5, `rgba(180,120,255,${0.25 + 0.2 * Math.sin(time * 2 + st.id)})`);
       }
     }
 
-    // Status markers
     if (st.state === "idle" && !def.passive) {
-      c.fillStyle = "#f2b33d";
+      c.fillStyle = `rgba(255,200,80,${0.55 + 0.35 * Math.sin(time * 3)})`;
       c.beginPath();
-      c.arc(sx + 12 * z, sy - 26 * z, 4 * z, 0, Math.PI * 2);
+      c.arc(sx + 12 * z, sy - 26 * z, 3.5 * z, 0, Math.PI * 2);
       c.fill();
+      this.glowRing(sx + 12 * z, sy - 26 * z, z, 5, 5, "rgba(255,200,80,0.35)", 1);
     }
     if (st.state === "broken") {
-      const a = 0.5 + 0.5 * Math.sin(time * 8);
-      c.strokeStyle = `rgba(255,70,60,${a})`;
-      c.lineWidth = 3 * z;
+      const a = 0.45 + 0.45 * Math.sin(time * 8);
+      c.strokeStyle = `rgba(255,70,110,${a})`;
+      c.lineWidth = 2.5 * z;
       c.beginPath();
       c.moveTo(sx - 7 * z, sy - 30 * z);
       c.lineTo(sx + 7 * z, sy - 16 * z);
@@ -511,25 +656,70 @@ export class IsoView {
 
   private drawRobot(r: Robot, sx: number, sy: number, z: number, time: number) {
     const c = this.ctx;
-    const colors: Record<string, string> = { dozer: "#f2c14e", digger: "#e07a5f", miner: "#c08552", explorer: "#7fc8f8", airbot: "#a6e3e9", repairbot: "#9be564", humanoid: "#ddd" };
-    const bob = Math.sin(time * 6 + r.id) * 2 * z;
-    c.fillStyle = "rgba(0,0,0,0.35)";
+    const accents: Record<string, string> = {
+      dozer: "#ffd166",
+      digger: "#ff7a59",
+      miner: "#f0a46a",
+      explorer: "#7ad7ff",
+      airbot: "#8ef0e8",
+      repairbot: "#9bff7a",
+      humanoid: "#e8f0ff",
+    };
+    const accent = accents[r.kind] ?? "#fff";
+    const bob = Math.sin(time * 5 + r.id) * 1.8 * z;
+    const y = sy - 7 * z + bob;
+    // Hover pad / shadow
+    c.fillStyle = "rgba(40,180,255,0.18)";
     c.beginPath();
-    c.ellipse(sx, sy + 2 * z, 10 * z, 5 * z, 0, 0, Math.PI * 2);
+    c.ellipse(sx, sy + 3 * z, 11 * z, 5 * z, 0, 0, Math.PI * 2);
     c.fill();
-    c.fillStyle = colors[r.kind] ?? "#fff";
+    this.glowRing(sx, sy + 3 * z, z, 9, 4, `rgba(90,220,255,${0.25 + 0.15 * Math.sin(time * 4 + r.id)})`, 1);
+    // Chassis
     c.beginPath();
-    c.arc(sx, sy - 8 * z + bob, 8 * z, 0, Math.PI * 2);
+    c.moveTo(sx - 9 * z, y + 4 * z);
+    c.lineTo(sx - 7 * z, y - 4 * z);
+    c.lineTo(sx + 7 * z, y - 4 * z);
+    c.lineTo(sx + 9 * z, y + 4 * z);
+    c.closePath();
+    c.fillStyle = "#1a2433";
     c.fill();
-    c.strokeStyle = "#111";
-    c.lineWidth = 1.5;
+    c.strokeStyle = accent;
+    c.lineWidth = 1.2 * z;
     c.stroke();
-    if (z > 0.6) {
-      c.fillStyle = "#111";
-      c.font = `bold ${Math.round(10 * z)}px system-ui, sans-serif`;
+    // Canopy / sensor dome
+    c.beginPath();
+    c.ellipse(sx, y - 2 * z, 5.5 * z, 4.5 * z, 0, 0, Math.PI * 2);
+    c.fillStyle = mix(accent, "#d9f7ff", 0.45);
+    c.fill();
+    c.fillStyle = `rgba(255,255,255,${0.35 + 0.25 * Math.sin(time * 6 + r.id)})`;
+    c.beginPath();
+    c.arc(sx - 1.5 * z, y - 3.5 * z, 1.4 * z, 0, Math.PI * 2);
+    c.fill();
+    // Tool cue by kind
+    c.strokeStyle = accent;
+    c.lineWidth = 1.6 * z;
+    c.beginPath();
+    if (r.kind === "dozer") {
+      c.moveTo(sx - 10 * z, y + 2 * z);
+      c.lineTo(sx - 14 * z, y + 5 * z);
+      c.lineTo(sx - 6 * z, y + 5 * z);
+    } else if (r.kind === "digger" || r.kind === "miner") {
+      c.moveTo(sx + 8 * z, y);
+      c.lineTo(sx + 14 * z, y + 6 * z);
+    } else if (r.kind === "explorer") {
+      c.moveTo(sx, y - 7 * z);
+      c.lineTo(sx, y - 12 * z);
+    } else if (r.kind === "repairbot") {
+      c.moveTo(sx + 7 * z, y - 1 * z);
+      c.lineTo(sx + 12 * z, y - 5 * z);
+    }
+    c.stroke();
+    if (z > 0.65) {
+      c.fillStyle = "#041018";
+      c.font = `bold ${Math.round(8 * z)}px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace`;
       c.textAlign = "center";
       c.textBaseline = "middle";
-      c.fillText(r.kind[0].toUpperCase(), sx, sy - 8 * z + bob);
+      c.fillText(r.kind[0].toUpperCase(), sx, y - 2 * z);
     }
   }
 }
